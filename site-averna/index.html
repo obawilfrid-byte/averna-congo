@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVERNA – Collecte d'ordures haut de gamme à Brazzaville</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- WHATSAPP FLOAT -->
+  <a href="https://wa.me/242067222747" target="_blank" class="whatsapp-float" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-blanc.png" alt="AVERNA" class="logo" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#accueil"    class="nav-link">Accueil</a>
+        <a href="#services"   class="nav-link">Services</a>
+        <a href="#brazzaville" class="nav-link">Notre ville</a>
+        <a href="#pourquoi"   class="nav-link">Pourquoi nous</a>
+        <a href="#contact"    class="nav-link">Contact</a>
+      </nav>
+      <a href="inscription.html" class="btn btn-yellow">S'abonner</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="accueil">
+    <div class="hero-bg">
+      <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville" class="hero-bg-img" />
+      <div class="hero-overlay"></div>
+      <!-- Particules décoratives -->
+      <div class="hero-particles">
+        <span class="p p1"></span><span class="p p2"></span><span class="p p3"></span>
+        <span class="p p4"></span><span class="p p5"></span>
+      </div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Brazzaville · République du Congo
+        </div>
+        <h1 class="hero-title">
+          La collecte<br />
+          <span class="hero-title-accent">haut de gamme</span><br />
+          à votre porte
+        </h1>
+        <p class="hero-slogan">Nous changeons le visage de la poubelle</p>
+        <p class="hero-sub">Service professionnel, ponctuel et respectueux dans tous les arrondissements de Brazzaville.</p>
+        <div class="hero-btns">
+          <a href="inscription.html" class="btn btn-yellow btn-lg">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            Demander mon abonnement
+          </a>
+          <a href="#services" class="btn btn-glass btn-lg">Découvrir nos services</a>
+        </div>
+        <div class="hero-valeurs">
+          <span>✦ Propreté</span>
+          <span>✦ Régularité</span>
+          <span>✦ Confiance</span>
+        </div>
+      </div>
+
+      <!-- TRICYCLE ILLUSTRATION -->
+      <div class="hero-illustration">
+        <div class="tricycle-scene">
+          <!-- Route -->
+          <div class="road">
+            <div class="road-line"></div>
+            <div class="road-line"></div>
+          </div>
+          <!-- Tricycle SVG -->
+          <svg class="tricycle-svg" viewBox="0 0 320 220" xmlns="http://www.w3.org/2000/svg">
+            <!-- Ombre au sol -->
+            <ellipse cx="160" cy="210" rx="120" ry="8" fill="rgba(0,0,0,0.25)"/>
+            <!-- Benne / container -->
+            <rect x="60" y="80" width="140" height="85" rx="6" fill="#1A7A4C"/>
+            <rect x="65" y="85" width="130" height="75" rx="4" fill="#2DA068"/>
+            <!-- Couvercle benne -->
+            <rect x="55" y="72" width="150" height="16" rx="5" fill="#0F4D2E"/>
+            <!-- Logo AVERNA sur la benne -->
+            <rect x="80" y="95" width="100" height="50" rx="4" fill="#0F4D2E"/>
+            <text x="130" y="116" font-family="Arial Black, sans-serif" font-size="11" font-weight="900" fill="#F5C518" text-anchor="middle">AVERNA</text>
+            <text x="130" y="132" font-family="Arial, sans-serif" font-size="7" fill="rgba(255,255,255,0.7)" text-anchor="middle">COLLECTE BRAZZAVILLE</text>
+            <!-- Bandes réfléchissantes -->
+            <rect x="60" y="148" width="140" height="6" rx="2" fill="#F5C518" opacity="0.8"/>
+            <!-- Cabine -->
+            <rect x="192" y="95" width="78" height="70" rx="6" fill="#1A7A4C"/>
+            <rect x="198" y="100" width="66" height="55" rx="4" fill="#2DA068"/>
+            <!-- Pare-brise -->
+            <rect x="200" y="103" width="50" height="35" rx="3" fill="#87CEEB" opacity="0.8"/>
+            <line x1="225" y1="103" x2="225" y2="138" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+            <!-- Phare -->
+            <circle cx="267" cy="150" r="6" fill="#F5C518"/>
+            <circle cx="267" cy="150" r="4" fill="#FFF9C4"/>
+            <!-- Toit cabine -->
+            <rect x="192" y="88" width="80" height="12" rx="4" fill="#0F4D2E"/>
+            <!-- Conducteur silhouette -->
+            <circle cx="215" cy="108" r="8" fill="#0F4D2E"/>
+            <rect x="209" y="116" width="12" height="16" rx="3" fill="#0F4D2E"/>
+            <!-- Bras conducteur -->
+            <line x1="221" y1="122" x2="235" y2="118" stroke="#0F4D2E" stroke-width="4" stroke-linecap="round"/>
+            <!-- Roues -->
+            <circle cx="95"  cy="195" r="22" fill="#1a1a1a"/>
+            <circle cx="95"  cy="195" r="15" fill="#333"/>
+            <circle cx="95"  cy="195" r="6"  fill="#F5C518"/>
+            <circle cx="230" cy="195" r="22" fill="#1a1a1a"/>
+            <circle cx="230" cy="195" r="15" fill="#333"/>
+            <circle cx="230" cy="195" r="6"  fill="#F5C518"/>
+            <!-- Roue arrière gauche -->
+            <circle cx="55"  cy="195" r="18" fill="#1a1a1a"/>
+            <circle cx="55"  cy="195" r="12" fill="#333"/>
+            <circle cx="55"  cy="195" r="5"  fill="#F5C518"/>
+            <!-- Châssis -->
+            <rect x="50" y="165" width="225" height="12" rx="4" fill="#0F4D2E"/>
+            <!-- Bacs sur le tricycle -->
+            <rect x="62" y="58" width="22" height="26" rx="3" fill="#F5C518"/>
+            <rect x="88" y="58" width="22" height="26" rx="3" fill="#F5C518"/>
+            <rect x="62" y="55" width="22" height="6" rx="2" fill="#e0b010"/>
+            <rect x="88" y="55" width="22" height="6" rx="2" fill="#e0b010"/>
+          </svg>
+          <!-- Effet de vitesse -->
+          <div class="speed-lines">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <!-- Bulle info -->
+        <div class="tricycle-bubble">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1A7A4C" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          En route pour votre quartier !
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Défiler</span>
+    </div>
+  </section>
+
+  <!-- ===================== STATS ===================== -->
+  <section class="stats-band">
+    <div class="container stats-inner">
+      <div class="stat-item">
+        <span class="stat-num" data-target="325">0</span><span class="stat-suffix">+</span>
+        <span class="stat-label">Abonnés satisfaits</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="8">0</span>
+        <span class="stat-label">Arrondissements couverts</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+        <span class="stat-label">Taux de satisfaction</span>
+      </div>
+      <div class="stat-sep"></div>
+      <div class="stat-item">
+        <span class="stat-num" data-target="5">0</span>
+        <span class="stat-label">Années d'expérience</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="section services-section" id="services">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos services</span>
+        <h2 class="section-title">Une collecte pensée pour vous</h2>
+        <p class="section-sub">Chaque abonné AVERNA bénéficie d'un service personnalisé, adapté à son rythme et à ses besoins.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card service-card--main">
+          <div class="service-card-bg"></div>
+          <div class="service-card-inner">
+            <div class="service-icon-wrap">
+              <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="28" cy="28" r="28" fill="rgba(245,197,24,0.15)"/>
+                <path d="M16 38V22a4 4 0 014-4h16a4 4 0 014 4v16" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M12 38h32" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round"/>
+                <path d="M24 18v-4h8v4" stroke="#F5C518" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M25 28h6M25 33h6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Collecte régulière</h3>
+            <p>Passages planifiés de 2 à 6 fois par semaine selon votre quartier. Bac poubelle offert dès l'abonnement.</p>
+            <div class="service-tag">Bac offert</div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap service-icon-wrap--green">
+            <svg viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="28" fill="rgba(45,160,104,0.15)"/>
+              <circle cx="28" cy="28" r="11" stroke="#2DA068" stroke-width="2.5"/>
+              <path d="M28 23v5l3.5 3.5" stroke="#2DA068" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M17 17l-3-3M39 17l3-3M17 39l-3 3M39 39l3 3" stroke="#2DA068" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Ponctualité garantie</h3>
+          <p>Nos équipes respectent vos créneaux horaires à chaque passage, sans exception.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap service-icon-wrap--green">
+            <svg viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="28" fill="rgba(45,160,104,0.15)"/>
+              <path d="M28 14l3.09 6.26L38 21.27l-5 4.87 1.18 6.86L28 30l-6.18 3-1.18-6.86-5-4.87 6.91-1.01L28 14z" stroke="#2DA068" stroke-width="2.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <h3>Équipes professionnelles</h3>
+          <p>Agents en tenue, formés et respectueux. Désinfection des bacs incluse dans votre abonnement.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon-wrap service-icon-wrap--green">
+            <svg viewBox="0 0 56 56" fill="none">
+              <circle cx="28" cy="28" r="28" fill="rgba(45,160,104,0.15)"/>
+              <path d="M20 36V28a8 8 0 1116 0v8" stroke="#2DA068" stroke-width="2.5" stroke-linecap="round"/>
+              <path d="M16 36h24" stroke="#2DA068" stroke-width="2.5" stroke-linecap="round"/>
+              <circle cx="28" cy="28" r="3" fill="#2DA068"/>
+            </svg>
+          </div>
+          <h3>Flexibilité totale</h3>
+          <p>Particuliers, commerces, entreprises ou résidences : une offre sur mesure pour chaque profil.</p>
+        </div>
+
+        <div class="service-card service-card--wide">
+          <img src="images/services.jpg" alt="Bacs et véhicules AVERNA" class="service-wide-img" />
+          <div class="service-wide-content">
+            <h3>Nos équipements</h3>
+            <p>Bacs de 50L, 100L et 240L, tricycles et camions désinfectés, tenues professionnelles. AVERNA investit dans la qualité pour votre confort.</p>
+            <a href="inscription.html" class="btn btn-yellow">Je m'abonne →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BRAZZAVILLE ===================== -->
+  <section class="section brazza-section" id="brazzaville">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Notre ville</span>
+        <h2 class="section-title">AVERNA partout à Brazzaville</h2>
+        <p class="section-sub">Nos tricycles sillonnent chaque jour les rues des 8 arrondissements de la capitale congolaise.</p>
+      </div>
+
+      <!-- MAP ILLUSTRÉE + QUARTIERS -->
+      <div class="brazza-layout">
+        <div class="brazza-map-area">
+          <!-- Illustration ville SVG -->
+          <div class="city-illustration">
+            <svg viewBox="0 0 480 320" xmlns="http://www.w3.org/2000/svg" class="city-svg">
+              <!-- Ciel dégradé -->
+              <defs>
+                <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#0F4D2E" stop-opacity="0.9"/>
+                  <stop offset="100%" stop-color="#1A7A4C" stop-opacity="0.6"/>
+                </linearGradient>
+                <linearGradient id="roadGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#1a1a2e"/>
+                  <stop offset="100%" stop-color="#16213e"/>
+                </linearGradient>
+              </defs>
+              <rect width="480" height="320" fill="url(#skyGrad)" rx="16"/>
+
+              <!-- Soleil / lune -->
+              <circle cx="400" cy="50" r="35" fill="rgba(245,197,24,0.15)" />
+              <circle cx="400" cy="50" r="22" fill="#F5C518" opacity="0.7"/>
+
+              <!-- Fleuve Congo (stylisé) -->
+              <path d="M0 260 Q120 240 240 255 Q360 270 480 250 L480 320 L0 320 Z" fill="#1565C0" opacity="0.4"/>
+              <path d="M0 268 Q120 250 240 263 Q360 278 480 258" stroke="rgba(100,180,255,0.4)" stroke-width="2" fill="none"/>
+              <text x="200" y="295" font-family="Inter,sans-serif" font-size="9" fill="rgba(255,255,255,0.5)" text-anchor="middle">Fleuve Congo</text>
+
+              <!-- SOL -->
+              <rect x="0" y="248" width="480" height="15" fill="#1a2a1f" opacity="0.6"/>
+
+              <!-- BÂTIMENTS SKYLINE -->
+              <!-- Tour 1 (Basilique style) -->
+              <rect x="20" y="160" width="40" height="88" fill="#0F4D2E" rx="2"/>
+              <rect x="25" y="140" width="30" height="22" fill="#0a3d22" rx="2"/>
+              <polygon points="40,120 25,140 55,140" fill="#F5C518"/>
+              <rect x="37" y="100" width="6" height="22" fill="#F5C518"/>
+              <rect x="23" y="175" width="10" height="14" fill="#87CEEB" opacity="0.6" rx="1"/>
+              <rect x="37" y="175" width="10" height="14" fill="#87CEEB" opacity="0.6" rx="1"/>
+              <rect x="51" y="175" width="10" height="14" fill="#87CEEB" opacity="0.6" rx="1"/>
+
+              <!-- Tour 2 -->
+              <rect x="75" y="185" width="35" height="63" fill="#1A7A4C" rx="2"/>
+              <rect x="80" y="195" width="10" height="14" fill="#87CEEB" opacity="0.7" rx="1"/>
+              <rect x="95" y="195" width="10" height="14" fill="#87CEEB" opacity="0.7" rx="1"/>
+              <rect x="80" y="215" width="10" height="12" fill="#87CEEB" opacity="0.5" rx="1"/>
+              <rect x="95" y="215" width="10" height="12" fill="#87CEEB" opacity="0.5" rx="1"/>
+
+              <!-- Tour 3 – Grand immeuble -->
+              <rect x="120" y="145" width="50" height="103" fill="#0F4D2E" rx="2"/>
+              <rect x="125" y="155" width="12" height="16" fill="#F5C518" opacity="0.5" rx="1"/>
+              <rect x="142" y="155" width="12" height="16" fill="#F5C518" opacity="0.5" rx="1"/>
+              <rect x="159" y="155" width="8" height="16" fill="#F5C518" opacity="0.5" rx="1"/>
+              <rect x="125" y="178" width="12" height="16" fill="#87CEEB" opacity="0.6" rx="1"/>
+              <rect x="142" y="178" width="12" height="16" fill="#87CEEB" opacity="0.6" rx="1"/>
+              <rect x="125" y="201" width="12" height="16" fill="#87CEEB" opacity="0.4" rx="1"/>
+              <rect x="142" y="201" width="12" height="16" fill="#87CEEB" opacity="0.4" rx="1"/>
+              <rect x="125" y="224" width="40" height="10" fill="#1A7A4C" opacity="0.8" rx="1"/>
+
+              <!-- Tour 4 -->
+              <rect x="180" y="170" width="42" height="78" fill="#2DA068" rx="2"/>
+              <rect x="185" y="178" width="12" height="14" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="202" y="178" width="12" height="14" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="185" y="198" width="12" height="14" fill="rgba(255,255,255,0.15)" rx="1"/>
+              <rect x="202" y="198" width="12" height="14" fill="rgba(255,255,255,0.15)" rx="1"/>
+              <rect x="185" y="218" width="12" height="14" fill="rgba(255,255,255,0.1)" rx="1"/>
+              <rect x="202" y="218" width="12" height="14" fill="rgba(255,255,255,0.1)" rx="1"/>
+
+              <!-- Tour centrale haute -->
+              <rect x="232" y="120" width="55" height="128" fill="#0F4D2E" rx="2"/>
+              <rect x="237" y="128" width="16" height="20" fill="#F5C518" opacity="0.4" rx="1"/>
+              <rect x="258" y="128" width="16" height="20" fill="#F5C518" opacity="0.4" rx="1"/>
+              <rect x="237" y="155" width="16" height="18" fill="#87CEEB" opacity="0.5" rx="1"/>
+              <rect x="258" y="155" width="16" height="18" fill="#87CEEB" opacity="0.5" rx="1"/>
+              <rect x="237" y="180" width="16" height="18" fill="#87CEEB" opacity="0.4" rx="1"/>
+              <rect x="258" y="180" width="16" height="18" fill="#87CEEB" opacity="0.4" rx="1"/>
+              <rect x="237" y="205" width="16" height="18" fill="#87CEEB" opacity="0.3" rx="1"/>
+              <rect x="258" y="205" width="16" height="18" fill="#87CEEB" opacity="0.3" rx="1"/>
+              <!-- Antenne -->
+              <rect x="257" y="100" width="3" height="22" fill="#F5C518"/>
+              <circle cx="258" cy="98" r="3" fill="#F5C518"/>
+
+              <!-- Tour 5 -->
+              <rect x="298" y="158" width="45" height="90" fill="#1A7A4C" rx="2"/>
+              <rect x="303" y="166" width="12" height="16" fill="rgba(255,255,255,0.25)" rx="1"/>
+              <rect x="320" y="166" width="12" height="16" fill="rgba(255,255,255,0.25)" rx="1"/>
+              <rect x="303" y="188" width="12" height="16" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="320" y="188" width="12" height="16" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="303" y="210" width="12" height="14" fill="rgba(255,255,255,0.15)" rx="1"/>
+              <rect x="320" y="210" width="12" height="14" fill="rgba(255,255,255,0.15)" rx="1"/>
+
+              <!-- Maisons basses -->
+              <rect x="355" y="208" width="38" height="40" fill="#0F4D2E" rx="2"/>
+              <polygon points="355,208 393,208 374,188" fill="#0a3d22"/>
+              <rect x="365" y="220" width="12" height="15" fill="#87CEEB" opacity="0.5" rx="1"/>
+              <rect x="365" y="220" width="12" height="15" fill="#87CEEB" opacity="0.5" rx="1"/>
+
+              <rect x="400" y="215" width="35" height="33" fill="#1A7A4C" rx="2"/>
+              <polygon points="400,215 435,215 417,198" fill="#0F4D2E"/>
+              <rect x="409" y="226" width="10" height="13" fill="#87CEEB" opacity="0.5" rx="1"/>
+
+              <rect x="443" y="195" width="37" height="53" fill="#2DA068" rx="2"/>
+              <rect x="448" y="205" width="10" height="13" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="463" y="205" width="10" height="13" fill="rgba(255,255,255,0.2)" rx="1"/>
+              <rect x="448" y="224" width="10" height="12" fill="rgba(255,255,255,0.15)" rx="1"/>
+
+              <!-- Route principale -->
+              <rect x="0" y="245" width="480" height="14" fill="url(#roadGrad)" opacity="0.8"/>
+              <line x1="0" y1="252" x2="480" y2="252" stroke="rgba(245,197,24,0.4)" stroke-width="1.5" stroke-dasharray="20,15"/>
+
+              <!-- TRICYCLE sur la route -->
+              <g class="city-tricycle">
+                <rect x="0" y="5" width="65" height="28" rx="3" fill="#1A7A4C"/>
+                <rect x="5" y="8" width="55" height="22" rx="2" fill="#2DA068"/>
+                <text x="32" y="22" font-family="Arial Black" font-size="6" font-weight="900" fill="#F5C518" text-anchor="middle">AVERNA</text>
+                <rect x="63" y="10" width="22" height="20" rx="3" fill="#1A7A4C"/>
+                <rect x="65" y="12" width="16" height="14" rx="2" fill="#87CEEB" opacity="0.7"/>
+                <circle cx="12"  cy="36" r="8" fill="#111"/>
+                <circle cx="12"  cy="36" r="5" fill="#333"/>
+                <circle cx="12"  cy="36" r="2" fill="#F5C518"/>
+                <circle cx="75"  cy="36" r="8" fill="#111"/>
+                <circle cx="75"  cy="36" r="5" fill="#333"/>
+                <circle cx="75"  cy="36" r="2" fill="#F5C518"/>
+                <rect x="5" y="30" width="80" height="5" rx="2" fill="#0F4D2E"/>
+              </g>
+
+              <!-- Palmier déco -->
+              <line x1="460" y1="185" x2="460" y2="248" stroke="#0F4D2E" stroke-width="4"/>
+              <ellipse cx="452" cy="188" rx="14" ry="8" fill="#2DA068" transform="rotate(-20,452,188)"/>
+              <ellipse cx="468" cy="190" rx="14" ry="7" fill="#1A7A4C" transform="rotate(15,468,190)"/>
+              <ellipse cx="460" cy="182" rx="10" ry="6" fill="#2DA068" transform="rotate(0,460,182)"/>
+
+              <!-- Étoiles / points lumineux -->
+              <circle cx="50"  cy="35" r="1.5" fill="white" opacity="0.6"/>
+              <circle cx="180" cy="25" r="1"   fill="white" opacity="0.5"/>
+              <circle cx="330" cy="40" r="1.5" fill="white" opacity="0.7"/>
+              <circle cx="420" cy="20" r="1"   fill="white" opacity="0.4"/>
+
+              <!-- Label ville -->
+              <text x="240" y="22" font-family="Syne,sans-serif" font-size="13" font-weight="800" fill="rgba(245,197,24,0.8)" text-anchor="middle" letter-spacing="3">BRAZZAVILLE</text>
+            </svg>
+
+            <!-- Badge flottant -->
+            <div class="city-badge city-badge--1">
+              <span class="cb-dot"></span> Poto-Poto
+            </div>
+            <div class="city-badge city-badge--2">
+              <span class="cb-dot"></span> Bacongo
+            </div>
+            <div class="city-badge city-badge--3">
+              <span class="cb-dot"></span> Moungali
+            </div>
+          </div>
+        </div>
+
+        <!-- QUARTIERS CARDS -->
+        <div class="brazza-quartiers">
+          <p class="brazza-intro">Nos équipes opèrent dans les <strong>8 arrondissements</strong> avec des tricycles dédiés par zone :</p>
+          <div class="quartiers-grid">
+            <div class="q-card">
+              <span class="q-num">1<sup>er</sup></span>
+              <div class="q-info">
+                <strong>Makélékélé</strong>
+                <span>Zone Sud-Ouest</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">2<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Bacongo</strong>
+                <span>Zone Sud</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">3<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Poto-Poto</strong>
+                <span>Centre-ville</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">4<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Moungali</strong>
+                <span>Zone Nord</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">5<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Ouenzé</strong>
+                <span>Zone Nord-Est</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">6<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Talangaï</strong>
+                <span>Zone Nord</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">7<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Mfilou</strong>
+                <span>Zone Ouest</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+            <div class="q-card">
+              <span class="q-num">8<sup>ème</sup></span>
+              <div class="q-info">
+                <strong>Madibou</strong>
+                <span>Zone Sud</span>
+              </div>
+              <span class="q-badge active">Actif</span>
+            </div>
+          </div>
+          <a href="inscription.html" class="btn btn-green mt-2">Vérifier mon arrondissement →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERIE / AFFICHE ===================== -->
+  <section class="gallery-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos équipes sur le terrain</span>
+        <h2 class="section-title">AVERNA en action</h2>
+        <p class="section-sub">Chaque jour, nos agents et tricycles quadrillent Brazzaville pour vous offrir une ville plus propre.</p>
+      </div>
+    </div>
+
+    <div class="gallery-mosaic">
+      <!-- Photo principale : agent + basilique -->
+      <div class="gallery-item gallery-item--main">
+        <img src="images/agent-basilique.png" alt="Agent AVERNA devant la Basilique Sainte-Anne" />
+        <div class="gallery-overlay">
+          <span>Agent AVERNA devant la Basilique Sainte-Anne · Brazzaville</span>
+        </div>
+      </div>
+      <!-- Tricycle Hôtel de Ville -->
+      <div class="gallery-item gallery-item--tall">
+        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" />
+        <div class="gallery-overlay">
+          <span>Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville</span>
+        </div>
+      </div>
+      <!-- Affiche promotionnelle -->
+      <div class="gallery-item">
+        <img src="images/affiche.jpg" alt="Agent AVERNA avec bacs" />
+        <div class="gallery-overlay">
+          <span>Équipes et équipements AVERNA</span>
+        </div>
+      </div>
+      <!-- Carte stat -->
+      <div class="gallery-item gallery-item--card gallery-item--yellow">
+        <div class="gallery-card-inner">
+          <div class="gc-number">+325</div>
+          <p>Foyers et entreprises nous font confiance à Brazzaville</p>
+        </div>
+      </div>
+      <!-- Services -->
+      <div class="gallery-item">
+        <img src="images/services.jpg" alt="Bacs AVERNA" />
+        <div class="gallery-overlay">
+          <span>Bacs professionnels AVERNA</span>
+        </div>
+      </div>
+      <!-- Carte depuis 2021 -->
+      <div class="gallery-item gallery-item--card gallery-item--dark">
+        <div class="gallery-card-inner">
+          <div class="gc-number" style="font-size:1.8rem;">Depuis<br/>2021</div>
+          <p>Au service des ménages et entreprises de Brazzaville</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POURQUOI ===================== -->
+  <section class="section pourquoi-section" id="pourquoi">
+    <div class="container pourquoi-inner">
+      <div class="pourquoi-img-wrap">
+        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" />
+        <div class="pourquoi-img-badge">
+          <strong>100%</strong>
+          <span>Satisfaction client</span>
+        </div>
+      </div>
+      <div class="pourquoi-content">
+        <span class="section-tag">Pourquoi AVERNA ?</span>
+        <h2 class="section-title">Ce qui nous distingue</h2>
+        <ul class="avantages-list">
+          <li>
+            <div class="av-icon">✓</div>
+            <div><strong>Bac poubelle offert</strong><br /><span>Chaque nouvel abonné reçoit son bac gratuitement.</span></div>
+          </li>
+          <li>
+            <div class="av-icon">✓</div>
+            <div><strong>Désinfection incluse</strong><br /><span>Bacs nettoyés et désinfectés régulièrement sans supplément.</span></div>
+          </li>
+          <li>
+            <div class="av-icon">✓</div>
+            <div><strong>Passages flexibles</strong><br /><span>2, 3, 4 ou 6 passages par semaine selon vos besoins.</span></div>
+          </li>
+          <li>
+            <div class="av-icon">✓</div>
+            <div><strong>Couverture totale</strong><br /><span>Les 8 arrondissements de Brazzaville desservis.</span></div>
+          </li>
+          <li>
+            <div class="av-icon">✓</div>
+            <div><strong>Support WhatsApp</strong><br /><span>Joignez-nous instantanément, lundi au samedi 7h–18h.</span></div>
+          </li>
+        </ul>
+        <a href="inscription.html" class="btn btn-green mt-2">Je m'abonne maintenant →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== OFFRE ===================== -->
+  <section class="offre-section">
+    <div class="offre-bg-shapes">
+      <span class="os1"></span><span class="os2"></span><span class="os3"></span>
+    </div>
+    <div class="container offre-inner">
+      <div class="offre-left">
+        <div class="offre-badge">Offre de bienvenue</div>
+        <h2 class="offre-title">50% de réduction<br />sur votre 1ère facture</h2>
+        <p class="offre-text">+ 1 bac poubelle offert à chaque nouvel abonné</p>
+        <a href="inscription.html" class="btn btn-green btn-lg">Je profite de l'offre →</a>
+      </div>
+      <div class="offre-right">
+        <!-- Illustration bac géant -->
+        <svg viewBox="0 0 200 240" class="offre-bac-svg">
+          <rect x="30" y="60" width="140" height="160" rx="10" fill="#0F4D2E"/>
+          <rect x="35" y="65" width="130" height="150" rx="8" fill="#1A7A4C"/>
+          <!-- Couvercle -->
+          <rect x="20" y="45" width="160" height="22" rx="8" fill="#0F4D2E"/>
+          <rect x="80" y="30" width="40" height="18" rx="6" fill="#0F4D2E"/>
+          <!-- Rayures -->
+          <rect x="30" y="190" width="140" height="10" rx="3" fill="#F5C518"/>
+          <rect x="30" y="210" width="140" height="8" rx="3" fill="#F5C518" opacity="0.5"/>
+          <!-- Poignée -->
+          <path d="M75 155 Q100 170 125 155" stroke="#F5C518" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <!-- AVERNA sur bac -->
+          <text x="100" y="115" font-family="Arial Black" font-size="18" font-weight="900" fill="#F5C518" text-anchor="middle">AVERNA</text>
+          <text x="100" y="135" font-family="Arial" font-size="9" fill="rgba(255,255,255,0.6)" text-anchor="middle">OFFERT</text>
+          <!-- Étoile -->
+          <path d="M100 20 l3 6 6 0 -5 4 2 6 -6-4 -6 4 2-6 -5-4 6 0z" fill="#F5C518"/>
+        </svg>
+        <div class="offre-tag">Valeur : 15 000 FCFA</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GRILLE TARIFAIRE ===================== -->
+  <section class="section tarif-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Nos tarifs</span>
+        <h2 class="section-title">Grille tarifaire transparente</h2>
+        <p class="section-sub">Des offres adaptées aux particuliers, commerces, restaurants et entreprises de Brazzaville.</p>
+      </div>
+      <div class="tarif-layout">
+        <div class="tarif-img-wrap">
+          <img src="images/grille-tarifaire.png" alt="Grille tarifaire AVERNA commerces" />
+        </div>
+        <div class="tarif-cards">
+          <div class="tarif-card">
+            <div class="tarif-icon">🏠</div>
+            <h3>Particuliers</h3>
+            <p>Bac 50L ou 100L · 2 à 6 passages/semaine</p>
+            <a href="inscription.html" class="btn btn-green btn-sm">Demander un devis</a>
+          </div>
+          <div class="tarif-card tarif-card--highlight">
+            <div class="tarif-icon">🏪</div>
+            <h3>Petits commerces</h3>
+            <p>100L max · 2 passages/semaine à partir de <strong>10 000 FCFA</strong></p>
+            <a href="inscription.html" class="btn btn-yellow btn-sm">S'abonner</a>
+          </div>
+          <div class="tarif-card">
+            <div class="tarif-icon">🍽️</div>
+            <h3>Hôtels & Restaurants</h3>
+            <p>Jusqu'à 200L · 3 passages/semaine à partir de <strong>15 000 FCFA</strong></p>
+            <a href="inscription.html" class="btn btn-green btn-sm">Demander un devis</a>
+          </div>
+          <div class="tarif-card">
+            <div class="tarif-icon">🏢</div>
+            <h3>Grandes entreprises</h3>
+            <p>Volume +500L · Étude personnalisée sur mesure</p>
+            <a href="inscription.html" class="btn btn-green btn-sm">Nous contacter</a>
+          </div>
+          <div class="tarif-note">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            Les tarifs incluent la collecte, le transport et le traitement sécurisé des déchets.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CLIENT VEDETTE : BON BOEUF ===================== -->
+  <section class="bonboeuf-section">
+
+    <!-- BANDEAU TITRE -->
+    <div class="bb-header">
+      <div class="container bb-header-inner">
+        <div class="bb-header-left">
+          <span class="section-tag">Notre plus grand client · Depuis 2021</span>
+          <h2 class="bb-main-title">Bon Boeuf Boucherie</h2>
+          <p class="bb-main-sub">La plus grande boucherie de la République du Congo fait confiance à AVERNA depuis <strong>5 ans</strong></p>
+        </div>
+        <div class="bb-header-right">
+          <div class="bb-stat-pill"><span class="bb-num">5</span><span class="bb-label">Ans de partenariat</span></div>
+          <div class="bb-stat-pill"><span class="bb-num">6×</span><span class="bb-label">Passages/semaine</span></div>
+          <div class="bb-stat-pill bb-stat-pill--yellow"><span class="bb-num">★★★★★</span><span class="bb-label">Satisfaction</span></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PHOTOS CRÉATIVES -->
+    <div class="bb-photos">
+
+      <!-- Photo bâtiment : pleine largeur en arrière-plan découpé -->
+      <div class="bb-photo-building">
+        <img src="images/bon-boeuf-batiment.png" alt="Bon Boeuf Boucherie – Brazzaville" />
+        <div class="bb-building-overlay">
+          <div class="bb-building-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Brazzaville, République du Congo
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo agents : carte flottante par-dessus -->
+      <div class="bb-photo-agents-wrap">
+        <div class="bb-photo-agents">
+          <img src="images/bon-boeuf.jpg" alt="Agents AVERNA en mission chez Bon Boeuf" />
+
+          <!-- Badge AVERNA en mission -->
+          <div class="bb-agents-badge">
+            <img src="images/logo-blanc.png" alt="AVERNA" />
+            <div>
+              <strong>AVERNA en mission</strong>
+              <span>Collecte professionnelle chaque jour</span>
+            </div>
+          </div>
+
+          <!-- Pastille verte "En service" -->
+          <div class="bb-live-badge">
+            <span class="bb-live-dot"></span> En service
+          </div>
+        </div>
+
+        <!-- TÉMOIGNAGE sous la photo agents -->
+        <div class="bb-temo-card">
+          <div class="bb-temo-quote">"</div>
+          <p>"Depuis 5 ans, AVERNA est notre partenaire de confiance. Leurs agents sont ponctuels, discrets et très efficaces. Nous recommandons vivement AVERNA à toute entreprise qui cherche un service sérieux à Brazzaville."</p>
+          <div class="bb-temo-author">
+            <div class="bb-temo-avatar">BB</div>
+            <div>
+              <strong>Direction Bon Boeuf Boucherie</strong>
+              <span>Partenaire depuis 2021</span>
+            </div>
+            <div class="bb-temo-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA BOTTOM -->
+    <div class="bb-cta">
+      <div class="container bb-cta-inner">
+        <p>Comme Bon Boeuf, faites confiance à AVERNA pour la gestion de vos déchets</p>
+        <a href="inscription.html" class="btn btn-yellow btn-lg">Devenir partenaire →</a>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ===================== LA CERISE ===================== -->
+  <section class="cerise-section">
+    <div class="container cerise-inner">
+
+      <!-- Contenu gauche -->
+      <div class="cerise-content">
+        <span class="section-tag cerise-tag">Client fidèle · Depuis 3 ans</span>
+
+        <div class="cerise-brand">
+          <div class="cerise-logo-icon">🍒</div>
+          <div>
+            <h2 class="cerise-title">La Cerise</h2>
+            <p class="cerise-sub">Boulangerie · Pâtisserie · Snack · Salon de Thé</p>
+          </div>
+        </div>
+
+        <!-- Deux sites -->
+        <div class="cerise-sites">
+          <div class="cerise-site-card">
+            <span class="cerise-site-dot"></span>
+            <div>
+              <strong>La Cerise – Moungali</strong>
+              <span>123, Av. des Trois Martyrs · Moungali</span>
+            </div>
+          </div>
+          <div class="cerise-site-card">
+            <span class="cerise-site-dot"></span>
+            <div>
+              <strong>La Cerise – Mabirou</strong>
+              <span>Mabirou · Brazzaville</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Témoignage -->
+        <div class="cerise-temo">
+          <div class="cerise-quote">"</div>
+          <p>"La Cerise a confié ses deux établissements à AVERNA depuis 3 ans maintenant. Chaque jour, leurs agents assurent la collecte avec sérieux et ponctualité. Grâce à AVERNA, nos locaux restent propres et nos clients sont dans le meilleur cadre. Un partenaire sur lequel on peut vraiment compter à Brazzaville."</p>
+          <div class="cerise-author">
+            <div class="cerise-avatar">LC</div>
+            <div>
+              <strong>Direction La Cerise</strong>
+              <span>2 sites confiés à AVERNA depuis 2023</span>
+            </div>
+            <div class="cerise-stars">★★★★★</div>
+          </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="cerise-stats">
+          <div class="cs-stat">
+            <span class="cs-num">3</span>
+            <span class="cs-label">Ans de fidélité</span>
+          </div>
+          <div class="cs-sep"></div>
+          <div class="cs-stat">
+            <span class="cs-num">2</span>
+            <span class="cs-label">Sites confiés</span>
+          </div>
+          <div class="cs-sep"></div>
+          <div class="cs-stat">
+            <span class="cs-num">6×</span>
+            <span class="cs-label">Par semaine</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Photo droite -->
+      <div class="cerise-img-wrap">
+        <img src="images/la-cerise.jpg" alt="Agents AVERNA chez La Cerise Pâtisserie Brazzaville" />
+
+        <!-- Overlay bas -->
+        <div class="cerise-img-overlay">
+          <div class="cerise-img-badge">
+            <span class="cerise-live-dot"></span>
+            <span>AVERNA en service · Moungali</span>
+          </div>
+        </div>
+
+        <!-- Tag flottant -->
+        <div class="cerise-float-tag">
+          🍒 La Cerise<br/><small>Pâtisserie Nº1 de Moungali</small>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== TEMOIGNAGES ===================== -->
+  <section class="section temoignages-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Témoignages</span>
+        <h2 class="section-title">Ils nous font confiance</h2>
+        <p class="section-sub">Des centaines de familles et entreprises de Brazzaville témoignent</p>
+      </div>
+      <div class="temo-grid">
+        <div class="temo-card temo-card--featured">
+          <div class="temo-quote">"</div>
+          <p>"Depuis que je suis abonné à AVERNA, mon quartier est nettement plus propre. Les agents arrivent toujours à l'heure, sont respectueux et professionnels. Le bac offert à l'inscription était un vrai plus !"</p>
+          <div class="temo-footer">
+            <div class="temo-avatar">MN</div>
+            <div>
+              <strong>Moise Nkounkou</strong>
+              <span>Poto-Poto · Particulier</span>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="temo-card">
+          <div class="temo-quote">"</div>
+          <p>"Notre restaurant génère beaucoup de déchets. AVERNA passe 4 fois par semaine, jamais de retard, jamais de problème. Service impeccable !"</p>
+          <div class="temo-footer">
+            <div class="temo-avatar">FB</div>
+            <div>
+              <strong>Fatou Bidimbou</strong>
+              <span>Bacongo · Commerce</span>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+        <div class="temo-card">
+          <div class="temo-quote">"</div>
+          <p>"J'ai souscrit pour toute notre résidence de 20 familles. AVERNA a transformé notre cadre de vie. La désinfection des bacs est un service que je ne retrouve nulle part ailleurs."</p>
+          <div class="temo-footer">
+            <div class="temo-avatar">RL</div>
+            <div>
+              <strong>René Loemba</strong>
+              <span>Moungali · Résidence</span>
+            </div>
+            <div class="temo-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contactez-nous</span>
+        <h2 class="section-title">Nous sommes à votre écoute</h2>
+        <p class="section-sub">Du lundi au samedi de 7h à 18h, notre équipe répond à toutes vos questions</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          </div>
+          <h3>Téléphone</h3>
+          <a href="tel:+242067222747" class="contact-val">06 722 27 47</a>
+          <a href="tel:+242053784667" class="contact-val">05 378 46 67</a>
+        </div>
+        <div class="contact-card contact-card--whatsapp">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/242067222747" target="_blank" class="contact-val">06 722 27 47</a>
+          <span class="contact-sub">Réponse rapide garantie</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </div>
+          <h3>Horaires</h3>
+          <span class="contact-val">Lun – Sam</span>
+          <span class="contact-val">7h00 – 18h00</span>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3>Localisation</h3>
+          <span class="contact-val">Brazzaville</span>
+          <span class="contact-sub">République du Congo</span>
+        </div>
+      </div>
+      <div class="contact-cta">
+        <a href="inscription.html" class="btn btn-yellow btn-lg">Demander mon abonnement →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+        <div class="footer-brand">
+          <img src="images/logo-blanc.png" alt="AVERNA" class="footer-logo" />
+          <p>Nous changeons le visage de la poubelle à Brazzaville depuis 2022.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/242067222747" target="_blank" class="footer-social" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#accueil">Accueil</a>
+          <a href="#services">Services</a>
+          <a href="#brazzaville">Notre ville</a>
+          <a href="#pourquoi">Pourquoi nous</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-links">
+          <h4>Services</h4>
+          <a href="inscription.html">S'abonner</a>
+          <a href="#services">Collecte régulière</a>
+          <a href="#services">Bac poubelle</a>
+          <a href="#services">Désinfection</a>
+        </div>
+        <div class="footer-contact-block">
+          <h4>Contact rapide</h4>
+          <p><a href="tel:+242067222747">06 722 27 47</a></p>
+          <p><a href="tel:+242053784667">05 378 46 67</a></p>
+          <p>Lun–Sam · 7h–18h</p>
+          <a href="inscription.html" class="btn btn-yellow mt-2" style="font-size:.85rem;padding:10px 20px;">S'abonner</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div class="footer-values">
+          <span>✦ Propreté</span>
+          <span>✦ Régularité</span>
+          <span>✦ Confiance</span>
+        </div>
+        <p>© 2025 AVERNA. Tous droits réservés. Brazzaville, République du Congo.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
