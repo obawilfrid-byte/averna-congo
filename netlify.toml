@@ -1,0 +1,14 @@
+# ════════════════════════════════════════════════
+# Configuration Netlify — Site vitrine AVERNA ETS
+# Site 100% statique (HTML / CSS / JavaScript) — aucune compilation
+# ════════════════════════════════════════════════
+
+[build]
+  # Dossier publié = racine du dépôt (index.html est ici)
+  publish = "."
+  # Pas de compilation : le site est déjà prêt à servir
+  command = "echo 'Site statique AVERNA — aucune compilation necessaire'"
+
+# Empêche Netlify d'installer les dépendances du backend Express (inutile en ligne)
+[build.environment]
+  NPM_FLAGS = "--no-install"

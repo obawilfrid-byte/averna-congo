@@ -1,0 +1,12 @@
+# ─── Fichiers à NE PAS publier sur GitHub ───
+
+# Dépendances Node (backend local uniquement)
+node_modules/
+
+# Base de données locale des inscriptions (données privées — ne jamais publier)
+backend/db.json
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+*.log

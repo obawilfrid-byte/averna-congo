@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>S'abonner – AVERNA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-inscription">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-blanc.png" alt="AVERNA" class="logo" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#accueil" class="nav-link">Accueil</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#pourquoi" class="nav-link">Pourquoi nous</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="inscription.html" class="btn btn-yellow">S'abonner</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title">Demander mon abonnement</h1>
+      <p class="page-hero-sub">Remplissez ce formulaire, notre équipe vous contacte sous 24h</p>
+    </div>
+  </div>
+
+  <!-- FORM LAYOUT -->
+  <div class="form-layout container">
+
+    <!-- FORMULAIRE PRINCIPAL -->
+    <main class="form-main">
+      <div class="form-card">
+        <div id="form-success" class="form-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>Demande envoyée avec succès !</h3>
+          <p>Notre équipe vous contactera dans les 24h. Merci de votre confiance.</p>
+          <a href="index.html" class="btn btn-green mt-2">Retour à l'accueil</a>
+        </div>
+
+        <form id="inscriptionForm" novalidate>
+          <!-- Identité -->
+          <div class="form-section-title">Vos informations personnelles</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom <span class="req">*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+              <span class="form-error" id="nom-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom <span class="req">*</span></label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+              <span class="form-error" id="prenom-err"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telephone">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 xxx xx xx" required />
+              <span class="form-error" id="telephone-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">Numéro WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Si différent du téléphone" />
+            </div>
+          </div>
+
+          <!-- Localisation -->
+          <div class="form-section-title">Votre localisation</div>
+          <div class="form-group">
+            <label for="quartier">Quartier / Arrondissement <span class="req">*</span></label>
+            <select id="quartier" name="quartier" required>
+              <option value="">Sélectionner votre arrondissement</option>
+              <option value="1er – Makélékélé">1er – Makélékélé</option>
+              <option value="2ème – Bacongo">2ème – Bacongo</option>
+              <option value="3ème – Poto-Poto">3ème – Poto-Poto</option>
+              <option value="4ème – Moungali">4ème – Moungali</option>
+              <option value="5ème – Ouenzé">5ème – Ouenzé</option>
+              <option value="6ème – Talangaï">6ème – Talangaï</option>
+              <option value="7ème – Mfilou">7ème – Mfilou</option>
+              <option value="8ème – Madibou">8ème – Madibou</option>
+              <option value="9ème – Djiri">9ème – Djiri</option>
+              <option value="10ème – Kintélé">10ème – Kintélé</option>
+            </select>
+            <span class="form-error" id="quartier-err"></span>
+          </div>
+          <div class="form-group">
+            <label for="adresse">Adresse précise / Repère <span class="req">*</span></label>
+            <input type="text" id="adresse" name="adresse" placeholder="Ex : Rue de la Paix, à côté de l'école..." required />
+            <span class="form-error" id="adresse-err"></span>
+          </div>
+
+          <!-- Type client -->
+          <div class="form-section-title">Type de client <span class="req">*</span></div>
+          <div class="type-grid" id="typeGrid">
+            <label class="type-card">
+              <input type="radio" name="typeClient" value="Particulier" checked />
+              <span class="type-icon">🏠</span>
+              <span class="type-label">Particulier</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="typeClient" value="Commerce" />
+              <span class="type-icon">🏪</span>
+              <span class="type-label">Commerce</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="typeClient" value="Entreprise" />
+              <span class="type-icon">🏢</span>
+              <span class="type-label">Entreprise</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="typeClient" value="Résidence" />
+              <span class="type-icon">🏘️</span>
+              <span class="type-label">Résidence</span>
+            </label>
+          </div>
+
+          <!-- Taille du bac -->
+          <div class="form-section-title">Taille du bac <span class="req">*</span></div>
+          <div class="bac-grid" id="bacGrid">
+            <label class="bac-card">
+              <input type="radio" name="taillebac" value="50L" checked />
+              <div class="bac-visual small"></div>
+              <span class="bac-label">50 L</span>
+              <span class="bac-desc">Petit foyer</span>
+            </label>
+            <label class="bac-card">
+              <input type="radio" name="taillebac" value="100L" />
+              <div class="bac-visual medium"></div>
+              <span class="bac-label">100 L</span>
+              <span class="bac-desc">Famille / Commerce</span>
+            </label>
+            <label class="bac-card">
+              <input type="radio" name="taillebac" value="240L" />
+              <div class="bac-visual large"></div>
+              <span class="bac-label">240 L</span>
+              <span class="bac-desc">Grande entreprise</span>
+            </label>
+          </div>
+
+          <!-- Fréquence -->
+          <div class="form-section-title">Fréquence de collecte <span class="req">*</span></div>
+          <div class="freq-grid">
+            <label class="freq-card">
+              <input type="radio" name="frequence" value="2 fois/semaine" checked />
+              <span class="freq-num">2×</span>
+              <span class="freq-label">par semaine</span>
+            </label>
+            <label class="freq-card">
+              <input type="radio" name="frequence" value="3 fois/semaine" />
+              <span class="freq-num">3×</span>
+              <span class="freq-label">par semaine</span>
+            </label>
+            <label class="freq-card">
+              <input type="radio" name="frequence" value="4 fois/semaine" />
+              <span class="freq-num">4×</span>
+              <span class="freq-label">par semaine</span>
+            </label>
+            <label class="freq-card">
+              <input type="radio" name="frequence" value="6 fois/semaine" />
+              <span class="freq-num">6×</span>
+              <span class="freq-label">par semaine</span>
+            </label>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group mt-2">
+            <label for="message">Message (facultatif)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Précisions, questions, besoins spéciaux..."></textarea>
+          </div>
+
+          <!-- Consentement -->
+          <div class="form-group consent-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>J'accepte que mes données personnelles soient utilisées par AVERNA pour traiter ma demande d'abonnement. <span class="req">*</span></span>
+            </label>
+            <span class="form-error" id="consent-err"></span>
+          </div>
+
+          <button type="submit" class="btn btn-green btn-full btn-lg" id="submitBtn">
+            <span id="btnText">Envoyer ma demande</span>
+            <span id="btnLoader" style="display:none;">Envoi en cours...</span>
+          </button>
+          <p id="form-global-error" class="form-global-error" style="display:none;"></p>
+        </form>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="form-sidebar">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Comment ça marche ?</h3>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-num">1</span>
+            <div><strong>Remplissez le formulaire</strong><br />Vos informations et vos préférences</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">2</span>
+            <div><strong>Notre équipe vous appelle</strong><br />Sous 24h pour confirmer</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">3</span>
+            <div><strong>Bac livré chez vous</strong><br />Gratuit dès l'abonnement</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">4</span>
+            <div><strong>Collecte démarrée</strong><br />Selon votre fréquence choisie</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Zones desservies</h3>
+        <div class="sidebar-pills">
+          <span class="pill-sm">Makélékélé</span>
+          <span class="pill-sm">Bacongo</span>
+          <span class="pill-sm">Poto-Poto</span>
+          <span class="pill-sm">Moungali</span>
+          <span class="pill-sm">Ouenzé</span>
+          <span class="pill-sm">Talangaï</span>
+          <span class="pill-sm">Mfilou</span>
+          <span class="pill-sm">Madibou</span>
+          <span class="pill-sm">Djiri</span>
+          <span class="pill-sm">Kintélé</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card sidebar-contact">
+        <h3 class="sidebar-title">Besoin d'aide ?</h3>
+        <p><strong>Téléphone :</strong><br /><a href="tel:+242067222747">06 722 27 47</a></p>
+        <p><strong>WhatsApp :</strong><br /><a href="https://wa.me/242067222747" target="_blank">06 722 27 47</a></p>
+        <p><strong>Horaires :</strong><br />Lun–Sam · 7h–18h</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="images/logo-blanc.png" alt="AVERNA" class="footer-logo" />
+      <p class="footer-copy">© 2025 AVERNA. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
