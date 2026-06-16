@@ -1,0 +1,113 @@
+Je veux créer un site web professionnel complet pour AVERNA,
+entreprise de collecte de déchets ménagers à Brazzaville, Congo.
+
+## STRUCTURE DU PROJET
+Crée un dossier "site-averna" avec cette organisation :
+site-averna/
+  index.html          (page d'accueil vitrine)
+  inscription.html    (formulaire d'abonnement)
+  admin.html          (tableau de bord admin)
+  css/style.css
+  js/main.js
+  js/admin.js
+  backend/server.js   (Node.js + Express)
+  backend/db.json     (stockage des inscriptions)
+  images/             (dossier pour les images)
+  package.json
+
+## COULEURS ET IDENTITÉ VISUELLE
+- Vert foncé : #0F4D2E
+- Vert principal : #1A7A4C
+- Vert moyen : #2DA068
+- Jaune/Or AVERNA : #F5C518
+- Blanc : #FFFFFF
+- Fond clair : #F7F9F7
+- Police display : Syne (Google Fonts)
+- Police corps : Inter (Google Fonts)
+- Slogan : "Nous changeons le visage de la poubelle"
+- Valeurs : Propreté · Régularité · Confiance
+
+## IMAGES DISPONIBLES (dans le dossier images/)
+- logo.jpg → logo officiel AVERNA (fond noir, à utiliser partout)
+- affiche.jpg → affiche promotionnelle (agent + camion + bacs)
+- services.jpg → visuels des bacs et fréquences de passage
+
+## PAGE 1 : index.html (vitrine)
+Sections dans l'ordre :
+1. HEADER fixe : logo AVERNA + navigation (Accueil, Services,
+   Pourquoi nous, Contact) + bouton CTA "S'abonner" en jaune
+2. HERO : image de fond (affiche.jpg en overlay vert foncé),
+   grand titre "Collecte d'ordures haut de gamme à Brazzaville",
+   sous-titre slogan, bouton "Demander mon abonnement" et
+   bouton secondaire "En savoir plus"
+3. STATS BAND : fond vert foncé, 3 chiffres :
+   +325 Abonnés | 8 Arrondissements | 100% Satisfaction
+4. SECTION SERVICES : 3 cartes avec icônes SVG :
+   - Collecte régulière (selon votre quartier)
+   - Service fiable (ponctualité garantie)
+   - Professionnel et respectueux (équipes formées)
+5. SECTION POURQUOI AVERNA : 2 colonnes —
+   gauche : image services.jpg,
+   droite : liste des avantages (bac offert, désinfection
+   incluse, passages flexibles 2/3/4/6 fois par semaine)
+6. SECTION OFFRE SPÉCIALE : fond jaune/or, texte :
+   "Offre spéciale : 50% de réduction sur votre 1ère facture
+   + 1 bac poubelle offert à chaque nouvel abonné"
+   Bouton CTA vert "Je profite de l'offre"
+7. SECTION ZONES : liste des 8 arrondissements de Brazzaville
+   sous forme de pills/badges verts
+8. SECTION TEMOIGNAGES : 3 cartes clients fictives positives
+9. SECTION CONTACT :
+   Téléphone : 06 722 27 47 / 05 378 46 67
+   WhatsApp disponible
+   Lun-Sam 7h-18h
+   Brazzaville, République du Congo
+10. FOOTER : logo + copyright AVERNA 2025
+
+## PAGE 2 : inscription.html (formulaire)
+Formulaire complet avec :
+- Nom, Prénom (côte à côte)
+- Téléphone, WhatsApp (côte à côte)
+- Quartier/Arrondissement (liste déroulante 8 arrondissements)
+- Adresse précise / repère
+- Type de client : Particulier / Commerce / Entreprise / Résidence
+- Taille du bac : 50L / 100L / 240L (sélection visuelle avec cartes)
+- Fréquence : 2 / 3 / 4 / 6 passages par semaine
+- Message libre (facultatif)
+- Case à cocher consentement RGPD
+- Bouton "Envoyer ma demande"
+Sidebar avec : étapes du processus, zones desservies, contacts
+
+## PAGE 3 : admin.html (tableau de bord)
+- Login simple par mot de passe (mot de passe : averna2025)
+- Tableau listant tous les inscrits avec colonnes :
+  Date | Nom complet | Téléphone | Quartier | Bac | Fréquence | Statut
+- Bouton "Exporter CSV" pour télécharger la liste
+- Compteur total d'inscrits
+- Filtre par quartier et par statut
+- Bouton pour changer le statut (En attente / Contacté / Abonné)
+
+## BACKEND : backend/server.js
+- Framework : Express.js
+- Port : 3000
+- Routes :
+  POST /api/inscription → enregistre dans db.json
+  GET /api/inscriptions → retourne tous les inscrits (protégé)
+  PUT /api/inscription/:id/statut → met à jour le statut
+  GET /api/export-csv → télécharge un CSV de tous les inscrits
+- Validation des champs obligatoires
+- CORS activé
+- db.json initialisé avec tableau vide []
+
+## PACKAGE.JSON
+Dépendances : express, cors, body-parser
+Script start : "node backend/server.js"
+
+## INSTRUCTIONS FINALES
+1. Crée tous les fichiers
+2. Installe les dépendances avec npm install
+3. Lance le serveur avec node backend/server.js
+4. Dis-moi l'URL pour voir le site dans mon navigateur
+5. Le site doit être 100% en français
+6. Design responsive (mobile + desktop)
+7. Utilise les vraies images depuis le dossier images/
