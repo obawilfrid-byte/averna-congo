@@ -143,39 +143,40 @@ if (form) {
     if (btnLoader) btnLoader.style.display = 'inline';
     if (globalErr) globalErr.style.display = 'none';
 
-    const payload = {
-      nom:        form.nom.value.trim(),
-      prenom:     form.prenom.value.trim(),
-      telephone:  form.telephone.value.trim(),
-      whatsapp:   form.whatsapp.value.trim(),
-      quartier:   form.quartier.value,
-      adresse:    form.adresse.value.trim(),
-      typeClient: (form.querySelector('input[name="typeClient"]:checked') || {}).value || '',
-      taillebac:  (form.querySelector('input[name="taillebac"]:checked')  || {}).value || '',
-      frequence:  (form.querySelector('input[name="frequence"]:checked')  || {}).value || '',
-      message:    form.message.value.trim()
-    };
+    // Encodage Netlify Forms (application/x-www-form-urlencoded)
+    const body = new URLSearchParams({
+      'form-name': 'inscription-averna',
+      nom:         form.nom.value.trim(),
+      prenom:      form.prenom.value.trim(),
+      telephone:   form.telephone.value.trim(),
+      whatsapp:    form.whatsapp.value.trim(),
+      quartier:    form.quartier.value,
+      adresse:     form.adresse.value.trim(),
+      typeClient:  (form.querySelector('input[name="typeClient"]:checked') || {}).value || '',
+      taillebac:   (form.querySelector('input[name="taillebac"]:checked')  || {}).value || '',
+      frequence:   (form.querySelector('input[name="frequence"]:checked')  || {}).value || '',
+      message:     form.message.value.trim()
+    });
 
     try {
-      const res  = await fetch('http://localhost:3000/api/inscription', {
+      const res = await fetch('/', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify(payload)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body:    body.toString()
       });
-      const data = await res.json();
 
       if (res.ok) {
         form.style.display = 'none';
         document.getElementById('form-success').style.display = 'block';
       } else {
         if (globalErr) {
-          globalErr.textContent = data.message || 'Une erreur est survenue.';
+          globalErr.textContent = 'Une erreur est survenue lors de l\'envoi. Veuillez réessayer ou nous appeler directement.';
           globalErr.style.display = 'block';
         }
       }
     } catch {
       if (globalErr) {
-        globalErr.textContent = 'Impossible de contacter le serveur. Vérifiez que le serveur est démarré (npm start).';
+        globalErr.textContent = 'Connexion impossible. Vérifiez votre connexion internet et réessayez.';
         globalErr.style.display = 'block';
       }
     } finally {

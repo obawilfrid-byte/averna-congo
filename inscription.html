@@ -51,7 +51,12 @@
           <a href="index.html" class="btn btn-green mt-2">Retour à l'accueil</a>
         </div>
 
-        <form id="inscriptionForm" novalidate>
+        <!-- data-netlify="true" permet à Netlify d'intercepter et stocker chaque soumission sans serveur -->
+        <form id="inscriptionForm" name="inscription-averna" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <!-- Champ anti-robot masqué (Netlify spam protection) -->
+          <p style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+          <!-- Champ requis par Netlify pour l'envoi AJAX -->
+          <input type="hidden" name="form-name" value="inscription-averna" />
           <!-- Identité -->
           <div class="form-section-title">Vos informations personnelles</div>
           <div class="form-row">

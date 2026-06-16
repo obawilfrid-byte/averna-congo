@@ -9,6 +9,10 @@
   # Pas de compilation : le site est déjà prêt à servir
   command = "echo 'Site statique AVERNA — aucune compilation necessaire'"
 
+# Dossier des fonctions serverless (ex : get-inscriptions.js)
+[functions]
+  directory = "netlify/functions"
+
 # Empêche Netlify d'installer les dépendances du backend Express (inutile en ligne)
 [build.environment]
   NPM_FLAGS = "--no-install"
