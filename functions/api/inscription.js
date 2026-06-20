@@ -89,18 +89,41 @@ export async function onRequestGet(context) {
     keyLen:      env.SUPABASE_SERVICE_KEY ? env.SUPABASE_SERVICE_KEY.length : 0,
     keyDebut:    env.SUPABASE_SERVICE_KEY ? env.SUPABASE_SERVICE_KEY.slice(0, 6) : ''
   };
+  // Rôle réel de la clé (décodé du JWT — le rôle n'est pas secret)
+  try {
+    const charge = JSON.parse(atob(env.SUPABASE_SERVICE_KEY.split('.')[1]));
+    diag.keyRole = charge.role;
+  } catch (e) {
+    diag.keyRole = 'indecodable';
+  }
+
   if (env.SUPABASE_URL && env.SUPABASE_SERVICE_KEY) {
+    const entetes = {
+      apikey:        env.SUPABASE_SERVICE_KEY,
+      Authorization: `Bearer ${env.SUPABASE_SERVICE_KEY}`
+    };
+    // Test LECTURE
     try {
-      const r = await fetch(`${env.SUPABASE_URL}/rest/v1/inscriptions?select=id&limit=1`, {
-        headers: {
-          apikey:        env.SUPABASE_SERVICE_KEY,
-          Authorization: `Bearer ${env.SUPABASE_SERVICE_KEY}`
-        }
-      });
-      diag.supabaseStatus = r.status;
-      diag.supabaseBody   = (await r.text()).slice(0, 300);
+      const r = await fetch(`${env.SUPABASE_URL}/rest/v1/inscriptions?select=id&limit=1`, { headers: entetes });
+      diag.lectureStatus = r.status;
     } catch (e) {
-      diag.supabaseError = String(e);
+      diag.lectureError = String(e);
+    }
+    // Test ÉCRITURE (insertion d'une ligne témoin, puis suppression)
+    try {
+      const ins = await fetch(`${env.SUPABASE_URL}/rest/v1/inscriptions`, {
+        method: 'POST',
+        headers: { ...entetes, 'Content-Type': 'application/json', Prefer: 'return=representation' },
+        body: JSON.stringify({ nom: '__DIAG_TEST__', telephone: '000' })
+      });
+      diag.insertStatus = ins.status;
+      diag.insertBody   = (await ins.text()).slice(0, 400);
+      // Nettoyage de la ligne témoin
+      await fetch(`${env.SUPABASE_URL}/rest/v1/inscriptions?nom=eq.__DIAG_TEST__`, {
+        method: 'DELETE', headers: entetes
+      });
+    } catch (e) {
+      diag.insertError = String(e);
     }
   }
   return new Response(JSON.stringify(diag, null, 2), {
