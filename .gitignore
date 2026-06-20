@@ -6,6 +6,9 @@ node_modules/
 # Base de données locale des inscriptions (données privées — ne jamais publier)
 backend/db.json
 
+# Migrations SQL Supabase (structure interne — ne pas publier sur le site)
+*.sql
+
 # Fichiers système
 .DS_Store
 Thumbs.db

@@ -1,7 +1,7 @@
 // =============================================
-// AVERNA – Script admin (Netlify Forms)
-// Les inscriptions sont récupérées via la Netlify Function get-inscriptions.js
-// Les statuts sont conservés dans localStorage (persistance locale)
+// AVERNA – Script admin
+// Les inscriptions sont récupérées via la Cloudflare Pages Function /api/inscriptions
+// (stockage Supabase). Les statuts sont conservés dans localStorage (persistance locale).
 // =============================================
 
 let allData = [];
@@ -54,7 +54,7 @@ if (logoutBtn) {
   });
 }
 
-// ---- LOAD DATA via Netlify Function ----
+// ---- LOAD DATA via Cloudflare Pages Function ----
 async function loadInscriptions() {
   const loginErr = document.getElementById('login-err');
   const tbody    = document.getElementById('tableBody');
@@ -62,7 +62,7 @@ async function loadInscriptions() {
   if (tbody) tbody.innerHTML = '<tr><td colspan="8" class="table-empty">Chargement...</td></tr>';
 
   try {
-    const res  = await fetch('/.netlify/functions/get-inscriptions', {
+    const res  = await fetch('/api/inscriptions', {
       method:  'POST',
       headers: { 'Content-Type': 'application/json' },
       body:    JSON.stringify({ password: adminPassword })
@@ -96,7 +96,7 @@ async function loadInscriptions() {
       // Déjà connecté — afficher l'erreur dans le tableau
       if (tbody) tbody.innerHTML = `<tr><td colspan="8" class="table-empty">
         Erreur : ${err.message}<br/>
-        <small>Vérifiez les variables d'environnement NETLIFY_SITE_ID, NETLIFY_API_TOKEN et ADMIN_PASSWORD dans le dashboard Netlify.</small>
+        <small>Vérifiez les variables d'environnement SUPABASE_URL, SUPABASE_SERVICE_KEY et ADMIN_PASSWORD dans le dashboard Cloudflare Pages.</small>
       </td></tr>`;
     } else {
       if (loginErr) loginErr.textContent = 'Connexion impossible. Vérifiez votre connexion internet.';

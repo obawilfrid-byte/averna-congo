@@ -143,9 +143,9 @@ if (form) {
     if (btnLoader) btnLoader.style.display = 'inline';
     if (globalErr) globalErr.style.display = 'none';
 
-    // Encodage Netlify Forms (application/x-www-form-urlencoded)
+    // Envoi vers la Cloudflare Pages Function (application/x-www-form-urlencoded)
     const body = new URLSearchParams({
-      'form-name': 'inscription-averna',
+      'bot-field': (form.querySelector('[name="bot-field"]') || {}).value || '',
       nom:         form.nom.value.trim(),
       prenom:      form.prenom.value.trim(),
       telephone:   form.telephone.value.trim(),
@@ -159,7 +159,7 @@ if (form) {
     });
 
     try {
-      const res = await fetch('/', {
+      const res = await fetch('/api/inscription', {
         method:  'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body:    body.toString()
