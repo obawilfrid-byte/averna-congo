@@ -55,7 +55,12 @@ export async function onRequestPost(context) {
     typeClient: r.typeClient || '',
     taillebac:  r.taillebac  || '',
     frequence:  r.frequence  || '',
-    message:    r.message    || ''
+    message:    r.message    || '',
+    // État de conversion écrit par le CRM (module Facturation) quand la
+    // demande devient un abonné : statut « Convertie » + code client MK.
+    // Permet à l'admin du site d'afficher « Abonné » automatiquement.
+    statutCrm:  r.statut     || '',
+    clientCode: r.clientCode || ''
   }));
 
   return json(data);

@@ -83,9 +83,20 @@ async function loadInscriptions() {
     loginOverlay.style.display = 'none';
     dashboard.style.display    = 'block';
 
-    // Fusionner avec les statuts sauvegardés localement
+    // Fusionner avec les statuts sauvegardés localement.
+    // Le CRM (module Facturation) marque la demande « Convertie » + clientCode
+    // dès qu'elle devient un abonné : c'est la SOURCE DE VÉRITÉ. On l'affiche
+    // alors « Abonné » et on verrouille le statut (l'admin du site ne le change
+    // plus à la main). Sinon, statut géré localement (En attente / Contacté).
     const statuts = loadStatuts();
-    allData = data.map(d => ({ ...d, statut: statuts[d.id] || 'En attente' }));
+    allData = data.map(d => {
+      const converti = d.statutCrm === 'Convertie' || !!d.clientCode;
+      return {
+        ...d,
+        converti,
+        statut: converti ? 'Abonné' : (statuts[d.id] || 'En attente')
+      };
+    });
 
     updateStats(allData);
     renderTable(allData);
@@ -123,6 +134,15 @@ function renderTable(data) {
   tbody.innerHTML = data.map(row => {
     const date = new Date(row.date).toLocaleDateString('fr-FR', { day:'2-digit', month:'2-digit', year:'numeric' });
     const badgeClass = row.statut === 'En attente' ? 'attente' : row.statut === 'Contacté' ? 'contacte' : 'abonne';
+    // Demande déjà convertie en abonné par le CRM → statut verrouillé (code client affiché),
+    // sinon menu déroulant modifiable par l'admin du site.
+    const actionCell = row.converti
+      ? `<span class="status-locked">✅ Abonné via CRM${row.clientCode ? ' · ' + row.clientCode : ''}</span>`
+      : `<select class="status-select" data-id="${row.id}" onchange="updateStatut(this)">
+            <option value="En attente" ${row.statut === 'En attente' ? 'selected' : ''}>En attente</option>
+            <option value="Contacté"   ${row.statut === 'Contacté'   ? 'selected' : ''}>Contacté</option>
+            <option value="Abonné"     ${row.statut === 'Abonné'     ? 'selected' : ''}>Abonné</option>
+          </select>`;
     return `
       <tr>
         <td>${date}</td>
@@ -132,13 +152,7 @@ function renderTable(data) {
         <td>${row.taillebac}</td>
         <td>${row.frequence}</td>
         <td><span class="status-badge ${badgeClass}">${row.statut}</span></td>
-        <td>
-          <select class="status-select" data-id="${row.id}" onchange="updateStatut(this)">
-            <option value="En attente" ${row.statut === 'En attente' ? 'selected' : ''}>En attente</option>
-            <option value="Contacté"   ${row.statut === 'Contacté'   ? 'selected' : ''}>Contacté</option>
-            <option value="Abonné"     ${row.statut === 'Abonné'     ? 'selected' : ''}>Abonné</option>
-          </select>
-        </td>
+        <td>${actionCell}</td>
       </tr>
     `;
   }).join('');
