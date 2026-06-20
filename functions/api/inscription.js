@@ -75,6 +75,39 @@ export async function onRequestPost(context) {
   return json({ ok: true });
 }
 
+// -------------------------------------------------------------
+// DIAGNOSTIC TEMPORAIRE (GET /api/inscription) — à retirer après.
+// N'expose JAMAIS la clé : seulement présence + longueur + le
+// résultat d'un test de lecture Supabase (statut + message).
+// -------------------------------------------------------------
+export async function onRequestGet(context) {
+  const { env } = context;
+  const diag = {
+    hasUrl:      !!env.SUPABASE_URL,
+    hasKey:      !!env.SUPABASE_SERVICE_KEY,
+    hasAdminPwd: !!env.ADMIN_PASSWORD,
+    keyLen:      env.SUPABASE_SERVICE_KEY ? env.SUPABASE_SERVICE_KEY.length : 0,
+    keyDebut:    env.SUPABASE_SERVICE_KEY ? env.SUPABASE_SERVICE_KEY.slice(0, 6) : ''
+  };
+  if (env.SUPABASE_URL && env.SUPABASE_SERVICE_KEY) {
+    try {
+      const r = await fetch(`${env.SUPABASE_URL}/rest/v1/inscriptions?select=id&limit=1`, {
+        headers: {
+          apikey:        env.SUPABASE_SERVICE_KEY,
+          Authorization: `Bearer ${env.SUPABASE_SERVICE_KEY}`
+        }
+      });
+      diag.supabaseStatus = r.status;
+      diag.supabaseBody   = (await r.text()).slice(0, 300);
+    } catch (e) {
+      diag.supabaseError = String(e);
+    }
+  }
+  return new Response(JSON.stringify(diag, null, 2), {
+    headers: { 'Content-Type': 'application/json' }
+  });
+}
+
 // Nettoie une valeur (chaîne, sans espaces superflus)
 function champ(v) {
   return (v == null ? '' : String(v)).trim();
