@@ -1,0 +1,6 @@
+# robots.txt — AVERNA ETS (https://www.avernacongo.com)
+User-agent: *
+Allow: /
+Disallow: /admin.html
+
+Sitemap: https://www.avernacongo.com/sitemap.xml
