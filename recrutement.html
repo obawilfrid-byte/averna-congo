@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Recrutement – Rejoignez l'équipe AVERNA</title>
+
+  <!-- ─── SEO & partage ─── -->
+  <meta name="description" content="AVERNA recrute à Brazzaville : prospecteurs terrain, pilotes de tricycle (Kavaki) et débords (copilotes). Déposez votre candidature en ligne, même spontanée." />
+  <meta name="keywords" content="emploi Brazzaville, recrutement AVERNA, prospecteur terrain, pilote tricycle Kavaki, débord copilote, offre d'emploi Congo, candidature spontanée" />
+  <meta name="author" content="AVERNA ETS" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0F4D2E" />
+  <link rel="canonical" href="https://www.avernacongo.com/recrutement.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="AVERNA ETS" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://www.avernacongo.com/recrutement.html" />
+  <meta property="og:title" content="AVERNA recrute — Rejoignez notre équipe à Brazzaville" />
+  <meta property="og:description" content="Prospecteurs terrain, pilotes de tricycle (Kavaki), débords (copilotes). Déposez votre candidature en ligne, même spontanée." />
+  <meta property="og:image" content="https://www.avernacongo.com/images/affiche.jpg" />
+
+  <!-- ─── Favicon ─── -->
+  <link rel="icon" type="image/jpeg" href="images/logo-rond.jpg" />
+  <link rel="apple-touch-icon" href="images/logo-rond.jpg" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="page-inscription">
+
+  <!-- HEADER -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo-link">
+        <img src="images/logo-blanc.png" alt="AVERNA" class="logo" />
+      </a>
+      <nav class="nav" id="nav">
+        <a href="index.html#accueil" class="nav-link">Accueil</a>
+        <a href="index.html#services" class="nav-link">Services</a>
+        <a href="index.html#pourquoi" class="nav-link">Pourquoi nous</a>
+        <a href="recrutement.html" class="nav-link">Recrutement</a>
+        <a href="index.html#contact" class="nav-link">Contact</a>
+      </nav>
+      <a href="inscription.html" class="btn btn-yellow">S'abonner</a>
+      <button class="burger" id="burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="container">
+      <h1 class="page-hero-title">Rejoignez l'équipe AVERNA</h1>
+      <p class="page-hero-sub">Nous recrutons en permanence les meilleurs profils de terrain. Déposez votre candidature en 2 minutes.</p>
+    </div>
+  </div>
+
+  <!-- FORM LAYOUT -->
+  <div class="form-layout container">
+
+    <!-- FORMULAIRE PRINCIPAL -->
+    <main class="form-main">
+      <div class="form-card">
+        <div id="form-success" class="form-success" style="display:none;">
+          <div class="success-icon">✓</div>
+          <h3>Candidature envoyée avec succès !</h3>
+          <p>Merci de votre intérêt. Notre équipe RH étudie votre profil et vous recontacte si celui-ci correspond à nos besoins.</p>
+          <a href="index.html" class="btn btn-green mt-2">Retour à l'accueil</a>
+        </div>
+
+        <!-- Soumission via la Cloudflare Pages Function /api/candidature (stockage Supabase) -->
+        <form id="candidatureForm" name="candidature-averna" novalidate>
+          <!-- Champ anti-robot masqué (honeypot vérifié côté serveur) -->
+          <p style="display:none;"><label>Ne pas remplir : <input name="bot-field" /></label></p>
+
+          <!-- Poste -->
+          <div class="form-section-title">Quel poste vous intéresse ? <span class="req">*</span></div>
+          <div class="type-grid" id="posteGrid">
+            <label class="type-card">
+              <input type="radio" name="poste" value="Prospecteur terrain" checked />
+              <span class="type-icon">🎯</span>
+              <span class="type-label">Prospecteur terrain</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="poste" value="Pilote tricycle (Kavaki)" />
+              <span class="type-icon">🛺</span>
+              <span class="type-label">Pilote (Kavaki)</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="poste" value="Débord (copilote)" />
+              <span class="type-icon">💪</span>
+              <span class="type-label">Débord (copilote)</span>
+            </label>
+            <label class="type-card">
+              <input type="radio" name="poste" value="Candidature spontanée" />
+              <span class="type-icon">✋</span>
+              <span class="type-label">Candidature spontanée</span>
+            </label>
+          </div>
+
+          <!-- Identité -->
+          <div class="form-section-title">Vos informations</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nom">Nom <span class="req">*</span></label>
+              <input type="text" id="nom" name="nom" placeholder="Votre nom" required />
+              <span class="form-error" id="nom-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom <span class="req">*</span></label>
+              <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required />
+              <span class="form-error" id="prenom-err"></span>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="telephone">Téléphone <span class="req">*</span></label>
+              <input type="tel" id="telephone" name="telephone" placeholder="06 xxx xx xx" required />
+              <span class="form-error" id="telephone-err"></span>
+            </div>
+            <div class="form-group">
+              <label for="whatsapp">Numéro WhatsApp</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Si différent du téléphone" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="quartier">Quartier où vous habitez</label>
+            <input type="text" id="quartier" name="quartier" placeholder="Ex : Ouenzé, Talangaï, Moungali..." />
+          </div>
+
+          <!-- Spécifique pilote (utile surtout pour le poste de pilote Kavaki) -->
+          <div class="form-section-title">Conduite (pour le poste de pilote)</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="conduitTricycle">Savez-vous conduire le tricycle (Kavaki) ?</label>
+              <select id="conduitTricycle" name="conduitTricycle">
+                <option value="">— Sélectionner —</option>
+                <option value="Oui, très bien">Oui, très bien</option>
+                <option value="Oui, un peu">Oui, un peu</option>
+                <option value="Non">Non</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="permisA">Avez-vous le permis de conduire catégorie A ?</label>
+              <select id="permisA" name="permisA">
+                <option value="">— Sélectionner —</option>
+                <option value="Oui">Oui</option>
+                <option value="Non">Non</option>
+                <option value="En cours">En cours d'obtention</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Expérience & disponibilité -->
+          <div class="form-section-title">Votre profil</div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="experience">Expérience dans ce domaine</label>
+              <select id="experience" name="experience">
+                <option value="">— Sélectionner —</option>
+                <option value="Aucune expérience">Aucune expérience</option>
+                <option value="Moins d'1 an">Moins d'1 an</option>
+                <option value="1 à 3 ans">1 à 3 ans</option>
+                <option value="Plus de 3 ans">Plus de 3 ans</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="disponibilite">Disponibilité</label>
+              <select id="disponibilite" name="disponibilite">
+                <option value="">— Sélectionner —</option>
+                <option value="Immédiate">Immédiate</option>
+                <option value="Sous 1 semaine">Sous 1 semaine</option>
+                <option value="Sous 1 mois">Sous 1 mois</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group mt-2">
+            <label for="message">Pourquoi voulez-vous rejoindre AVERNA ? (facultatif)</label>
+            <textarea id="message" name="message" rows="4" placeholder="Parlez-nous de votre motivation, vos qualités, votre disponibilité..."></textarea>
+          </div>
+
+          <!-- Consentement -->
+          <div class="form-group consent-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="consent" name="consent" required />
+              <span>J'accepte que mes données personnelles soient utilisées par AVERNA pour étudier ma candidature. <span class="req">*</span></span>
+            </label>
+            <span class="form-error" id="consent-err"></span>
+          </div>
+
+          <button type="submit" class="btn btn-green btn-full btn-lg" id="submitBtn">
+            <span id="btnText">Envoyer ma candidature</span>
+            <span id="btnLoader" style="display:none;">Envoi en cours...</span>
+          </button>
+          <p id="form-global-error" class="form-global-error" style="display:none;"></p>
+        </form>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="form-sidebar">
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Les profils recherchés</h3>
+        <ol class="steps-list">
+          <li class="step-item">
+            <span class="step-num">🎯</span>
+            <div><strong>Prospecteur terrain</strong><br />Motivé, efficace, à l'aise avec le contact client.</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">🛺</span>
+            <div><strong>Pilote tricycle (Kavaki)</strong><br />Maîtrise de la conduite. Permis catégorie A apprécié.</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">💪</span>
+            <div><strong>Débord (copilote)</strong><br />Pas besoin de conduire : motivation, force de travail et discipline.</div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="sidebar-card">
+        <h3 class="sidebar-title">Pourquoi AVERNA ?</h3>
+        <div class="sidebar-pills">
+          <span class="pill-sm">Entreprise sérieuse</span>
+          <span class="pill-sm">Équipe dynamique</span>
+          <span class="pill-sm">Travail valorisant</span>
+          <span class="pill-sm">Évolution possible</span>
+        </div>
+      </div>
+
+      <div class="sidebar-card sidebar-contact">
+        <h3 class="sidebar-title">Une question ?</h3>
+        <p><strong>Téléphone :</strong><br /><a href="tel:+242067222747">06 722 27 47</a></p>
+        <p><strong>WhatsApp :</strong><br /><a href="https://wa.me/242067222747" target="_blank">06 722 27 47</a></p>
+        <p><strong>Horaires :</strong><br />Lun–Sam · 7h–18h</p>
+      </div>
+    </aside>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <img src="images/logo-blanc.png" alt="AVERNA" class="footer-logo" />
+      <p class="footer-copy">© 2025 AVERNA. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/candidature.js"></script>
+</body>
+</html>
