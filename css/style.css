@@ -875,7 +875,7 @@ img { max-width: 100%; display: block; }
 .contact-section { background:var(--white); }
 
 .contact-grid {
-  display:grid; grid-template-columns:repeat(4,1fr);
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
   gap:20px; margin-bottom:48px;
 }
 
@@ -910,6 +910,9 @@ img { max-width: 100%; display: block; }
 .contact-val:hover { color:var(--green-dark); }
 
 .contact-sub { font-size:.78rem; color:var(--text-muted); }
+
+/* Adresse e-mail : un peu plus compacte et autorisée à passer à la ligne */
+.contact-val--email { font-size:.85rem; overflow-wrap:anywhere; line-height:1.35; }
 
 .contact-cta { text-align:center; }
 
