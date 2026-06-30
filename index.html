@@ -36,7 +36,62 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=2" />
+
+  <!-- ─── Données structurées : fiche entreprise locale (Google) ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "AVERNA ETS",
+    "image": "https://www.avernacongo.com/images/affiche.jpg",
+    "logo": "https://www.avernacongo.com/images/logo-rond.jpg",
+    "url": "https://www.avernacongo.com/",
+    "telephone": "+242067222747",
+    "email": "contact@avernacongo.com",
+    "description": "Entreprise professionnelle de collecte d'ordures ménagères par abonnement à Brazzaville et Kintélé : 2 à 6 passages par semaine, bac offert et désinfection inclus.",
+    "slogan": "Nous changeons le visage de la poubelle",
+    "foundingDate": "2021",
+    "priceRange": "à partir de 6000 FCFA",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "51 rue Okoyo, Talangaï",
+      "addressLocality": "Brazzaville",
+      "addressCountry": "CG"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Brazzaville" },
+      { "@type": "City", "name": "Kintélé" }
+    ],
+    "openingHoursSpecification": [{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+      "opens": "07:00",
+      "closes": "18:00"
+    }],
+    "sameAs": ["https://wa.me/242067222747"]
+  }
+  </script>
+
+  <!-- ─── Données structurées : foire aux questions ─── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Comment m'abonner à AVERNA ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Remplissez le formulaire en ligne ou écrivez-nous sur WhatsApp. Nous vous recontactons, installons votre bac gratuit et démarrons la collecte selon le rythme choisi." } },
+      { "@type": "Question", "name": "Quels quartiers de Brazzaville desservez-vous ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Nous couvrons les 9 arrondissements de Brazzaville (Makélékélé, Bacongo, Poto-Poto, Moungali, Ouenzé, Talangaï, Mfilou, Madibou, Djiri) ainsi que Kintélé." } },
+      { "@type": "Question", "name": "Le bac poubelle est-il vraiment offert ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque nouvel abonné reçoit gratuitement son bac (50L, 100L ou 240L selon le profil), et la désinfection des bacs est incluse dans l'abonnement." } },
+      { "@type": "Question", "name": "Combien de fois passez-vous par semaine ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "De 2 à 6 passages par semaine selon votre quartier et votre profil (particulier, commerce, restaurant ou entreprise)." } },
+      { "@type": "Question", "name": "Quels sont vos tarifs ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Les abonnements démarrent à partir de 6 000 FCFA par mois pour les particuliers, et 10 000 FCFA pour les petits commerces. Les grandes entreprises bénéficient d'une étude personnalisée." } }
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -272,7 +327,7 @@
         </div>
 
         <div class="service-card service-card--wide">
-          <img src="images/services.jpg" alt="Bacs et véhicules AVERNA" class="service-wide-img" />
+          <img src="images/services.jpg" alt="Bacs et véhicules AVERNA" class="service-wide-img" loading="lazy" decoding="async" />
           <div class="service-wide-content">
             <h3>Nos équipements</h3>
             <p>Bacs de 50L, 100L et 240L, tricycles et camions désinfectés, tenues professionnelles. AVERNA investit dans la qualité pour votre confort.</p>
@@ -280,6 +335,46 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== COMMENT ÇA MARCHE ===================== -->
+  <section class="section how-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Simple &amp; rapide</span>
+        <h2 class="section-title">Comment ça marche ?</h2>
+        <p class="section-sub">De votre demande à la tranquillité, il n'y a que 4 étapes.</p>
+      </div>
+      <div class="how-grid">
+        <div class="how-step">
+          <div class="how-num">1</div>
+          <div class="how-icon">📝</div>
+          <h3>Demandez votre abonnement</h3>
+          <p>Remplissez le formulaire en ligne ou écrivez-nous sur WhatsApp. Gratuit et sans engagement.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">2</div>
+          <div class="how-icon">📞</div>
+          <h3>On vous rappelle</h3>
+          <p>Notre équipe valide votre quartier, votre formule et vous propose le meilleur rythme de passage.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">3</div>
+          <div class="how-icon">🎁</div>
+          <h3>Votre bac offert est installé</h3>
+          <p>Nous vous remettons gratuitement votre bac (50L, 100L ou 240L) et planifions votre première collecte.</p>
+        </div>
+        <div class="how-step">
+          <div class="how-num">4</div>
+          <div class="how-icon">🚛</div>
+          <h3>Collecte régulière &amp; sereine</h3>
+          <p>Nos équipes passent 2 à 6 fois par semaine, désinfectent vos bacs et gardent votre cadre propre.</p>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:48px">
+        <a href="inscription.html" class="btn btn-green btn-lg">Commencer maintenant →</a>
       </div>
     </div>
   </section>
@@ -552,21 +647,21 @@
     <div class="gallery-mosaic">
       <!-- Photo principale : agent + basilique -->
       <div class="gallery-item gallery-item--main">
-        <img src="images/agent-basilique.png" alt="Agent AVERNA devant la Basilique Sainte-Anne" />
+        <img src="images/agent-basilique.png" alt="Agent AVERNA devant la Basilique Sainte-Anne" loading="lazy" decoding="async" />
         <div class="gallery-overlay">
           <span>Agent AVERNA devant la Basilique Sainte-Anne · Brazzaville</span>
         </div>
       </div>
       <!-- Tricycle Hôtel de Ville -->
       <div class="gallery-item gallery-item--tall">
-        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" />
+        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" loading="lazy" decoding="async" />
         <div class="gallery-overlay">
           <span>Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville</span>
         </div>
       </div>
       <!-- Affiche promotionnelle -->
       <div class="gallery-item">
-        <img src="images/affiche.jpg" alt="Agent AVERNA avec bacs" />
+        <img src="images/affiche.jpg" alt="Agent AVERNA avec bacs" loading="lazy" decoding="async" />
         <div class="gallery-overlay">
           <span>Équipes et équipements AVERNA</span>
         </div>
@@ -580,7 +675,7 @@
       </div>
       <!-- Services -->
       <div class="gallery-item">
-        <img src="images/services.jpg" alt="Bacs AVERNA" />
+        <img src="images/services.jpg" alt="Bacs AVERNA" loading="lazy" decoding="async" />
         <div class="gallery-overlay">
           <span>Bacs professionnels AVERNA</span>
         </div>
@@ -599,7 +694,7 @@
   <section class="section pourquoi-section" id="pourquoi">
     <div class="container pourquoi-inner">
       <div class="pourquoi-img-wrap">
-        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" />
+        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" loading="lazy" decoding="async" />
         <div class="pourquoi-img-badge">
           <strong>100%</strong>
           <span>Satisfaction client</span>
@@ -681,7 +776,7 @@
       </div>
       <div class="tarif-layout">
         <div class="tarif-img-wrap">
-          <img src="images/grille-tarifaire.png" alt="Grille tarifaire AVERNA commerces" />
+          <img src="images/grille-tarifaire.png" alt="Grille tarifaire AVERNA commerces" loading="lazy" decoding="async" />
         </div>
         <div class="tarif-cards">
           <div class="tarif-card">
@@ -741,7 +836,7 @@
 
       <!-- Photo bâtiment : pleine largeur en arrière-plan découpé -->
       <div class="bb-photo-building">
-        <img src="images/bon-boeuf-batiment.png" alt="Bon Boeuf Boucherie – Brazzaville" />
+        <img src="images/bon-boeuf-batiment.png" alt="Bon Boeuf Boucherie – Brazzaville" loading="lazy" decoding="async" />
         <div class="bb-building-overlay">
           <div class="bb-building-badge">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -753,7 +848,7 @@
       <!-- Photo agents : carte flottante par-dessus -->
       <div class="bb-photo-agents-wrap">
         <div class="bb-photo-agents">
-          <img src="images/bon-boeuf.jpg" alt="Agents AVERNA en mission chez Bon Boeuf" />
+          <img src="images/bon-boeuf.jpg" alt="Agents AVERNA en mission chez Bon Boeuf" loading="lazy" decoding="async" />
 
           <!-- Badge AVERNA en mission -->
           <div class="bb-agents-badge">
@@ -866,7 +961,7 @@
 
       <!-- Photo droite -->
       <div class="cerise-img-wrap">
-        <img src="images/la-cerise.jpg" alt="Agents AVERNA chez La Cerise Pâtisserie Brazzaville" />
+        <img src="images/la-cerise.jpg" alt="Agents AVERNA chez La Cerise Pâtisserie Brazzaville" loading="lazy" decoding="async" />
 
         <!-- Overlay bas -->
         <div class="cerise-img-overlay">
@@ -934,6 +1029,43 @@
     </div>
   </section>
 
+  <!-- ===================== FAQ ===================== -->
+  <section class="section faq-section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Questions fréquentes</span>
+        <h2 class="section-title">Tout ce que vous devez savoir</h2>
+        <p class="section-sub">Les réponses aux questions que se posent nos futurs abonnés.</p>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>Comment m'abonner à AVERNA ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>Remplissez le formulaire en ligne ou écrivez-nous sur WhatsApp. Nous vous recontactons, installons votre bac gratuit, puis démarrons la collecte au rythme choisi.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Quels quartiers de Brazzaville desservez-vous ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>Nous couvrons les <strong>9 arrondissements</strong> de Brazzaville — Makélékélé, Bacongo, Poto-Poto, Moungali, Ouenzé, Talangaï, Mfilou, Madibou, Djiri — ainsi que <strong>Kintélé</strong>.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Le bac poubelle est-il vraiment offert ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>Oui. Chaque nouvel abonné reçoit gratuitement son bac (50L, 100L ou 240L selon le profil), et la <strong>désinfection des bacs est incluse</strong> dans l'abonnement, sans supplément.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Combien de fois passez-vous par semaine ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>De <strong>2 à 6 passages par semaine</strong> selon votre quartier et votre profil (particulier, commerce, restaurant ou entreprise). Vous choisissez le rythme qui vous convient.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Quels sont vos tarifs ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>Les abonnements démarrent à partir de <strong>6 000 FCFA/mois</strong> pour les particuliers et <strong>10 000 FCFA/mois</strong> pour les petits commerces. Les hôtels, restaurants et grandes entreprises bénéficient d'une étude personnalisée.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Puis-je résilier ou modifier mon abonnement ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>Oui, à tout moment. Contactez-nous par téléphone ou WhatsApp : nous ajustons votre formule (volume, fréquence) ou traitons votre demande sans complication.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <!-- ===================== CONTACT ===================== -->
   <section class="section contact-section" id="contact">
     <div class="container">
@@ -996,7 +1128,7 @@
       <div class="container footer-top-inner">
         <div class="footer-brand">
           <img src="images/logo-blanc.png" alt="AVERNA" class="footer-logo" />
-          <p>Nous changeons le visage de la poubelle à Brazzaville depuis 2022.</p>
+          <p>Nous changeons le visage de la poubelle à Brazzaville depuis 2021.</p>
           <div class="footer-socials">
             <a href="https://wa.me/242067222747" target="_blank" class="footer-social" aria-label="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -1028,6 +1160,17 @@
         </div>
       </div>
     </div>
+    <div class="footer-legal">
+      <div class="container footer-legal-inner">
+        <span><strong>AVERNA ETS</strong> · Société de collecte de déchets</span>
+        <span class="fl-sep">•</span>
+        <span>📍 51 rue Okoyo, Talangaï — Brazzaville</span>
+        <span class="fl-sep">•</span>
+        <span>RCCM : BZV01-21A10-01079</span>
+        <span class="fl-sep">•</span>
+        <span>NIU : P24000000570826F</span>
+      </div>
+    </div>
     <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <div class="footer-values">
@@ -1035,11 +1178,11 @@
           <span>✦ Régularité</span>
           <span>✦ Confiance</span>
         </div>
-        <p>© 2025 AVERNA. Tous droits réservés. Brazzaville, République du Congo.</p>
+        <p>© 2026 AVERNA ETS. Tous droits réservés. Brazzaville, République du Congo.</p>
       </div>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js?v=2"></script>
 </body>
 </html>
