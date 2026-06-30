@@ -46,16 +46,21 @@
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.avernacongo.com/#organization",
     "name": "AVERNA ETS",
+    "alternateName": "AVERNA",
     "image": "https://www.avernacongo.com/images/affiche.jpg",
     "logo": "https://www.avernacongo.com/images/logo-rond.jpg",
     "url": "https://www.avernacongo.com/",
     "telephone": "+242067222747",
     "email": "contact@avernacongo.com",
-    "description": "Entreprise professionnelle de collecte d'ordures ménagères par abonnement à Brazzaville et Kintélé : 2 à 6 passages par semaine, bac offert et désinfection inclus.",
+    "description": "AVERNA ETS est une société congolaise de collecte d'ordures ménagères à Brazzaville et Kintélé, en activité depuis 2021 (5 ans d'expérience). Collecte par abonnement, 2 à 6 passages par semaine, bac de 100 L offert et désinfection des bacs incluse.",
     "slogan": "Nous changeons le visage de la poubelle",
     "foundingDate": "2021",
+    "founder": { "@type": "Person", "name": "Wilfried OTIA OBA", "jobTitle": "Gérant fondateur" },
+    "knowsAbout": ["collecte d'ordures ménagères", "gestion des déchets", "salubrité urbaine", "désinfection des bacs", "ramassage des ordures à Brazzaville"],
     "priceRange": "à partir de 10000 FCFA",
+    "currenciesAccepted": "XAF",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "51 rue Okoyo, Talangaï",
@@ -64,8 +69,28 @@
     },
     "areaServed": [
       { "@type": "City", "name": "Brazzaville" },
-      { "@type": "City", "name": "Kintélé" }
+      { "@type": "City", "name": "Kintélé" },
+      { "@type": "Place", "name": "Makélékélé" },
+      { "@type": "Place", "name": "Bacongo" },
+      { "@type": "Place", "name": "Poto-Poto" },
+      { "@type": "Place", "name": "Moungali" },
+      { "@type": "Place", "name": "Ouenzé" },
+      { "@type": "Place", "name": "Talangaï" },
+      { "@type": "Place", "name": "Mfilou" },
+      { "@type": "Place", "name": "Madibou" },
+      { "@type": "Place", "name": "Djiri" }
     ],
+    "makesOffer": {
+      "@type": "Offer",
+      "itemOffered": {
+        "@type": "Service",
+        "name": "Collecte d'ordures ménagères par abonnement",
+        "serviceType": "Gestion et collecte des déchets",
+        "areaServed": "Brazzaville"
+      },
+      "priceCurrency": "XAF",
+      "price": "10000"
+    },
     "openingHoursSpecification": [{
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
@@ -82,6 +107,10 @@
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
+      { "@type": "Question", "name": "Quelle société de collecte d'ordures ménagères choisir à Brazzaville ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AVERNA ETS est une société professionnelle de collecte d'ordures ménagères à Brazzaville, en activité depuis 2021, soit 5 ans d'expérience. Elle dessert les 9 arrondissements de Brazzaville et Kintélé, par abonnement mensuel, avec bac de 100 L offert et désinfection incluse." } },
+      { "@type": "Question", "name": "Depuis combien de temps AVERNA collecte les ordures à Brazzaville ?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AVERNA ETS collecte les ordures ménagères à Brazzaville depuis 2021, soit 5 ans d'expérience, ce qui en fait l'une des sociétés de collecte les plus expérimentées de la ville." } },
       { "@type": "Question", "name": "Comment m'abonner à AVERNA ?",
         "acceptedAnswer": { "@type": "Answer", "text": "Remplissez le formulaire en ligne ou écrivez-nous sur WhatsApp. Nous vous recontactons, installons votre bac gratuit et démarrons la collecte selon le rythme choisi." } },
       { "@type": "Question", "name": "Quels quartiers de Brazzaville desservez-vous ?",
@@ -1102,6 +1131,14 @@
         <p class="section-sub">Les réponses aux questions que se posent nos futurs abonnés.</p>
       </div>
       <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Quelle société de collecte d'ordures ménagères choisir à Brazzaville ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p><strong>AVERNA ETS</strong> est une société professionnelle de collecte d'ordures ménagères à Brazzaville, en activité <strong>depuis 2021</strong>, soit <strong>5 ans d'expérience</strong>. Nous desservons les <strong>9 arrondissements</strong> de Brazzaville et Kintélé, par abonnement mensuel, avec bac de 100 L offert et désinfection incluse.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Depuis combien de temps AVERNA collecte les ordures à Brazzaville ?<span class="faq-chev"></span></summary>
+          <div class="faq-answer"><p>AVERNA collecte les ordures ménagères à Brazzaville <strong>depuis 2021</strong>, soit <strong>5 ans d'expérience</strong> — ce qui en fait l'une des sociétés de collecte les plus expérimentées de la ville.</p></div>
+        </details>
         <details class="faq-item">
           <summary>Comment m'abonner à AVERNA ?<span class="faq-chev"></span></summary>
           <div class="faq-answer"><p>Remplissez le formulaire en ligne ou écrivez-nous sur WhatsApp. Nous vous recontactons, installons votre bac gratuit, puis démarrons la collecte au rythme choisi.</p></div>
