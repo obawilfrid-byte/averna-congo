@@ -36,7 +36,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css?v=2" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
+
+  <!-- Préchargement prioritaire de l'image d'accueil (LCP) pour un affichage rapide -->
+  <link rel="preload" as="image" href="images/tricycle-hotel-ville.webp" type="image/webp" fetchpriority="high" />
 
   <!-- ─── Données structurées : fiche entreprise locale (Google) ─── -->
   <script type="application/ld+json">
@@ -52,7 +55,7 @@
     "description": "Entreprise professionnelle de collecte d'ordures ménagères par abonnement à Brazzaville et Kintélé : 2 à 6 passages par semaine, bac offert et désinfection inclus.",
     "slogan": "Nous changeons le visage de la poubelle",
     "foundingDate": "2021",
-    "priceRange": "à partir de 6000 FCFA",
+    "priceRange": "à partir de 10000 FCFA",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "51 rue Okoyo, Talangaï",
@@ -84,11 +87,11 @@
       { "@type": "Question", "name": "Quels quartiers de Brazzaville desservez-vous ?",
         "acceptedAnswer": { "@type": "Answer", "text": "Nous couvrons les 9 arrondissements de Brazzaville (Makélékélé, Bacongo, Poto-Poto, Moungali, Ouenzé, Talangaï, Mfilou, Madibou, Djiri) ainsi que Kintélé." } },
       { "@type": "Question", "name": "Le bac poubelle est-il vraiment offert ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque nouvel abonné reçoit gratuitement son bac (50L, 100L ou 240L selon le profil), et la désinfection des bacs est incluse dans l'abonnement." } },
+        "acceptedAnswer": { "@type": "Answer", "text": "Oui. Chaque nouvel abonné reçoit gratuitement son bac de 100 L (1 à 3 bacs selon le type d'abonnement), et la désinfection des bacs est incluse dans l'abonnement." } },
       { "@type": "Question", "name": "Combien de fois passez-vous par semaine ?",
         "acceptedAnswer": { "@type": "Answer", "text": "De 2 à 6 passages par semaine selon votre quartier et votre profil (particulier, commerce, restaurant ou entreprise)." } },
       { "@type": "Question", "name": "Quels sont vos tarifs ?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Les abonnements démarrent à partir de 6 000 FCFA par mois pour les particuliers, et 10 000 FCFA pour les petits commerces. Les grandes entreprises bénéficient d'une étude personnalisée." } }
+        "acceptedAnswer": { "@type": "Answer", "text": "Les abonnements démarrent à partir de 10 000 FCFA par mois. Les hôtels, restaurants et grandes entreprises bénéficient d'une étude personnalisée." } }
     ]
   }
   </script>
@@ -123,7 +126,10 @@
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="accueil">
     <div class="hero-bg">
-      <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville" class="hero-bg-img" />
+      <picture>
+        <source type="image/webp" srcset="images/tricycle-hotel-ville.webp" />
+        <img src="images/tricycle-hotel-ville.jpg" alt="Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville" class="hero-bg-img" width="1542" height="1020" fetchpriority="high" decoding="async" />
+      </picture>
       <div class="hero-overlay"></div>
       <!-- Particules décoratives -->
       <div class="hero-particles">
@@ -327,10 +333,13 @@
         </div>
 
         <div class="service-card service-card--wide">
-          <img src="images/services.jpg" alt="Bacs et véhicules AVERNA" class="service-wide-img" loading="lazy" decoding="async" />
+          <picture>
+            <source type="image/webp" srcset="images/services.webp" />
+            <img src="images/services.jpg" alt="Bacs et véhicules AVERNA" class="service-wide-img" width="810" height="1080" loading="lazy" decoding="async" />
+          </picture>
           <div class="service-wide-content">
             <h3>Nos équipements</h3>
-            <p>Bacs de 50L, 100L et 240L, tricycles et camions désinfectés, tenues professionnelles. AVERNA investit dans la qualité pour votre confort.</p>
+            <p>Bacs de 100 L (1 à 3 selon votre abonnement), tricycles et camions désinfectés, tenues professionnelles. AVERNA investit dans la qualité pour votre confort.</p>
             <a href="inscription.html" class="btn btn-yellow">Je m'abonne →</a>
           </div>
         </div>
@@ -364,7 +373,7 @@
           <div class="how-num">3</div>
           <div class="how-icon">🎁</div>
           <h3>Votre bac offert est installé</h3>
-          <p>Nous vous remettons gratuitement votre bac (50L, 100L ou 240L) et planifions votre première collecte.</p>
+          <p>Nous vous remettons gratuitement votre/vos bac(s) de 100 L (1 à 3 selon l'abonnement) et planifions votre première collecte.</p>
         </div>
         <div class="how-step">
           <div class="how-num">4</div>
@@ -647,14 +656,20 @@
     <div class="gallery-mosaic">
       <!-- Photo principale : agent + basilique -->
       <div class="gallery-item gallery-item--main">
-        <img src="images/agent-basilique.png" alt="Agent AVERNA devant la Basilique Sainte-Anne" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/agent-basilique.webp" />
+          <img src="images/agent-basilique.jpg" alt="Agent AVERNA devant la Basilique Sainte-Anne" width="1280" height="851" loading="lazy" decoding="async" />
+        </picture>
         <div class="gallery-overlay">
           <span>Agent AVERNA devant la Basilique Sainte-Anne · Brazzaville</span>
         </div>
       </div>
       <!-- Tricycle Hôtel de Ville -->
       <div class="gallery-item gallery-item--tall">
-        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/tricycle-hotel-ville.webp" />
+          <img src="images/tricycle-hotel-ville.jpg" alt="Tricycle AVERNA devant l'Hôtel de Ville" width="1542" height="1020" loading="lazy" decoding="async" />
+        </picture>
         <div class="gallery-overlay">
           <span>Tricycle AVERNA devant l'Hôtel de Ville de Brazzaville</span>
         </div>
@@ -675,7 +690,10 @@
       </div>
       <!-- Services -->
       <div class="gallery-item">
-        <img src="images/services.jpg" alt="Bacs AVERNA" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/services.webp" />
+          <img src="images/services.jpg" alt="Bacs AVERNA" width="810" height="1080" loading="lazy" decoding="async" />
+        </picture>
         <div class="gallery-overlay">
           <span>Bacs professionnels AVERNA</span>
         </div>
@@ -694,7 +712,10 @@
   <section class="section pourquoi-section" id="pourquoi">
     <div class="container pourquoi-inner">
       <div class="pourquoi-img-wrap">
-        <img src="images/tricycle-hotel-ville.png" alt="Tricycle AVERNA devant l'Hôtel de Ville" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/tricycle-hotel-ville.webp" />
+          <img src="images/tricycle-hotel-ville.jpg" alt="Tricycle AVERNA devant l'Hôtel de Ville" width="1542" height="1020" loading="lazy" decoding="async" />
+        </picture>
         <div class="pourquoi-img-badge">
           <strong>100%</strong>
           <span>Satisfaction client</span>
@@ -776,25 +797,28 @@
       </div>
       <div class="tarif-layout">
         <div class="tarif-img-wrap">
-          <img src="images/grille-tarifaire.png" alt="Grille tarifaire AVERNA commerces" loading="lazy" decoding="async" />
+          <picture>
+            <source type="image/webp" srcset="images/grille-tarifaire.webp" />
+            <img src="images/grille-tarifaire.jpg" alt="Grille tarifaire AVERNA commerces" width="1448" height="1086" loading="lazy" decoding="async" />
+          </picture>
         </div>
         <div class="tarif-cards">
           <div class="tarif-card">
             <div class="tarif-icon">🏠</div>
             <h3>Particuliers</h3>
-            <p>Bac 50L ou 100L · 2 à 6 passages/semaine</p>
+            <p>Bac 100 L · 2 à 6 passages/semaine · à partir de <strong>10 000 FCFA</strong></p>
             <a href="inscription.html" class="btn btn-green btn-sm">Demander un devis</a>
           </div>
           <div class="tarif-card tarif-card--highlight">
             <div class="tarif-icon">🏪</div>
             <h3>Petits commerces</h3>
-            <p>100L max · 2 passages/semaine à partir de <strong>10 000 FCFA</strong></p>
+            <p>Bac 100 L · 2 passages/semaine à partir de <strong>10 000 FCFA</strong></p>
             <a href="inscription.html" class="btn btn-yellow btn-sm">S'abonner</a>
           </div>
           <div class="tarif-card">
             <div class="tarif-icon">🍽️</div>
             <h3>Hôtels & Restaurants</h3>
-            <p>Jusqu'à 200L · 3 passages/semaine à partir de <strong>15 000 FCFA</strong></p>
+            <p>100 L × 2 · 3 passages/semaine à partir de <strong>15 000 FCFA</strong></p>
             <a href="inscription.html" class="btn btn-green btn-sm">Demander un devis</a>
           </div>
           <div class="tarif-card">
@@ -836,7 +860,10 @@
 
       <!-- Photo bâtiment : pleine largeur en arrière-plan découpé -->
       <div class="bb-photo-building">
-        <img src="images/bon-boeuf-batiment.png" alt="Bon Boeuf Boucherie – Brazzaville" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/bon-boeuf-batiment.webp" />
+          <img src="images/bon-boeuf-batiment.jpg" alt="Bon Boeuf Boucherie – Brazzaville" width="1280" height="853" loading="lazy" decoding="async" />
+        </picture>
         <div class="bb-building-overlay">
           <div class="bb-building-badge">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -848,7 +875,10 @@
       <!-- Photo agents : carte flottante par-dessus -->
       <div class="bb-photo-agents-wrap">
         <div class="bb-photo-agents">
-          <img src="images/bon-boeuf.jpg" alt="Agents AVERNA en mission chez Bon Boeuf" loading="lazy" decoding="async" />
+          <picture>
+            <source type="image/webp" srcset="images/bon-boeuf.webp" />
+            <img src="images/bon-boeuf.jpg" alt="Agents AVERNA en mission chez Bon Boeuf" width="1080" height="608" loading="lazy" decoding="async" />
+          </picture>
 
           <!-- Badge AVERNA en mission -->
           <div class="bb-agents-badge">
@@ -961,7 +991,10 @@
 
       <!-- Photo droite -->
       <div class="cerise-img-wrap">
-        <img src="images/la-cerise.jpg" alt="Agents AVERNA chez La Cerise Pâtisserie Brazzaville" loading="lazy" decoding="async" />
+        <picture>
+          <source type="image/webp" srcset="images/la-cerise.webp" />
+          <img src="images/la-cerise.jpg" alt="Agents AVERNA chez La Cerise Pâtisserie Brazzaville" width="1008" height="756" loading="lazy" decoding="async" />
+        </picture>
 
         <!-- Overlay bas -->
         <div class="cerise-img-overlay">
@@ -1048,7 +1081,7 @@
         </details>
         <details class="faq-item">
           <summary>Le bac poubelle est-il vraiment offert ?<span class="faq-chev"></span></summary>
-          <div class="faq-answer"><p>Oui. Chaque nouvel abonné reçoit gratuitement son bac (50L, 100L ou 240L selon le profil), et la <strong>désinfection des bacs est incluse</strong> dans l'abonnement, sans supplément.</p></div>
+          <div class="faq-answer"><p>Oui. Chaque nouvel abonné reçoit gratuitement son bac de <strong>100 L</strong> (1 à 3 bacs selon le type d'abonnement), et la <strong>désinfection des bacs est incluse</strong> dans l'abonnement, sans supplément.</p></div>
         </details>
         <details class="faq-item">
           <summary>Combien de fois passez-vous par semaine ?<span class="faq-chev"></span></summary>
@@ -1056,7 +1089,7 @@
         </details>
         <details class="faq-item">
           <summary>Quels sont vos tarifs ?<span class="faq-chev"></span></summary>
-          <div class="faq-answer"><p>Les abonnements démarrent à partir de <strong>6 000 FCFA/mois</strong> pour les particuliers et <strong>10 000 FCFA/mois</strong> pour les petits commerces. Les hôtels, restaurants et grandes entreprises bénéficient d'une étude personnalisée.</p></div>
+          <div class="faq-answer"><p>Les abonnements démarrent à partir de <strong>10 000 FCFA/mois</strong>. Les hôtels, restaurants et grandes entreprises bénéficient d'une étude personnalisée selon le volume.</p></div>
         </details>
         <details class="faq-item">
           <summary>Puis-je résilier ou modifier mon abonnement ?<span class="faq-chev"></span></summary>
