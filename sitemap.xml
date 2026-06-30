@@ -7,8 +7,23 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.avernacongo.com/inscription.html</loc>
+    <loc>https://www.avernacongo.com/a-propos.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.avernacongo.com/engagement.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.avernacongo.com/inscription.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.avernacongo.com/recrutement.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
