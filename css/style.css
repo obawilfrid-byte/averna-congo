@@ -475,8 +475,9 @@ picture { display: contents; }
 
 .gallery-mosaic {
   display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-template-rows: 280px 200px;
+  grid-template-columns: 1.7fr 1fr 1fr 1.15fr;
+  grid-template-rows: 260px 220px;
+  grid-auto-rows: 220px;            /* filet : aucune tuile ne peut « ballonner » */
   gap: 16px;
   padding: 0 28px;
   max-width: 1180px; margin: 0 auto;
@@ -487,8 +488,10 @@ picture { display: contents; }
 .gallery-item img { width:100%; height:100%; object-fit:cover; transition:transform .5s; }
 .gallery-item:hover img { transform:scale(1.05); }
 
-.gallery-item--main { grid-row: 1/3; }
-.gallery-item--tall { grid-row: 1/3; }
+.gallery-item--main   { grid-column: 1; grid-row: 1 / 3; }   /* grande photo vedette */
+/* Affiche promotionnelle (format portrait) : tuile haute et étroite dans la
+   dernière colonne — elle ne déborde plus sur toute la page. */
+.gallery-item--poster { grid-column: 4; grid-row: 1 / 3; background: var(--green-dark); }
 
 .gallery-overlay {
   position:absolute; inset:0;
@@ -1479,9 +1482,12 @@ picture { display: contents; }
   .gallery-mosaic {
     grid-template-columns:1fr 1fr;
     grid-template-rows:220px 180px 150px;
+    grid-auto-rows:180px;
   }
-  .gallery-item--main { grid-row:1/2; grid-column:1/-1; }
-  .gallery-item--tall { grid-row:2/3; grid-column:1/2; }
+  .gallery-item--main   { grid-row:1/2; grid-column:1/-1; }
+  .gallery-item--tall   { grid-row:2/3; grid-column:1/2; }
+  /* Sur mobile l'affiche s'affiche pleine largeur, à hauteur maîtrisée */
+  .gallery-item--poster { grid-column:1/-1; grid-row:auto; height:360px; }
   .form-layout { grid-template-columns:1fr; }
   .form-sidebar { order:-1; }
   .type-grid { grid-template-columns:repeat(2,1fr); }
