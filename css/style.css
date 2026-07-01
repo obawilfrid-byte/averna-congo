@@ -1626,7 +1626,11 @@ picture { display: contents; }
 .value-card p { color: var(--text-muted); font-size: .94rem; line-height: 1.6; }
 
 .founder { display: grid; grid-template-columns: 280px 1fr; gap: 40px; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow-sm); }
-.founder-photo { width: 100%; aspect-ratio: 1; border-radius: var(--radius); object-fit: cover; background: linear-gradient(135deg, var(--green-main), var(--green-mid)); display: grid; place-items: center; color: #fff; font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; }
+/* Dans .founder, le <picture> est un enfant DIRECT de la grille : on annule le
+   display:contents global (ligne 38) pour qu'il redevienne la cellule de 280px,
+   sinon l'<img> déborde sur la 2e colonne et « remplit la page ». */
+.founder picture { display: block; width: 100%; }
+.founder-photo { width: 100%; height: auto; aspect-ratio: 4 / 3; border-radius: var(--radius); object-fit: cover; object-position: center top; border: 1px solid var(--border); box-shadow: var(--shadow-sm); background: linear-gradient(135deg, var(--green-main), var(--green-mid)); display: grid; place-items: center; color: #fff; font-family: 'Syne', sans-serif; font-size: 4rem; font-weight: 800; }
 .founder h3 { font-size: 1.5rem; color: var(--green-dark); }
 .founder .founder-role { color: var(--green-main); font-weight: 700; margin: 4px 0 16px; }
 .founder p { color: var(--text-muted); line-height: 1.75; }
