@@ -76,7 +76,7 @@ picture { display: contents; }
 }
 
 .section-title {
-  font-size: clamp(1.9rem, 3.5vw, 2.9rem);
+  font-size: clamp(1.35rem, 2.1vw, 1.85rem);
   font-weight: 800; color: var(--green-dark); margin-bottom: 18px;
 }
 
@@ -189,7 +189,7 @@ picture { display: contents; }
 @keyframes pulse { 0%,100%{box-shadow:0 0 0 0 rgba(245,197,24,.6);} 50%{box-shadow:0 0 0 8px rgba(245,197,24,0);} }
 
 .hero-title {
-  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-size: clamp(1.85rem, 3vw, 2.7rem);
   font-weight: 800; color: var(--white);
   margin-bottom: 10px; line-height: 1.05;
 }
@@ -587,7 +587,7 @@ picture { display: contents; }
 }
 
 .offre-title {
-  font-size:clamp(2rem, 4.5vw, 3.2rem); font-weight:800;
+  font-size:clamp(1.5rem, 2.5vw, 2.05rem); font-weight:800;
   color:var(--green-dark); margin-bottom:16px; line-height:1.1;
 }
 
@@ -636,7 +636,7 @@ picture { display: contents; }
 }
 
 .bb-main-title {
-  font-size: clamp(2.2rem, 4vw, 3.2rem); font-weight: 800;
+  font-size: clamp(1.55rem, 2.5vw, 2.05rem); font-weight: 800;
   color: var(--white); margin: 12px 0 10px; line-height: 1.1;
 }
 
@@ -1261,7 +1261,7 @@ picture { display: contents; }
   background:url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
 }
 
-.page-hero-title { font-size:clamp(1.8rem,4vw,3rem); font-weight:800; color:var(--white); margin-bottom:12px; position:relative; }
+.page-hero-title { font-size:clamp(1.35rem,2.4vw,1.95rem); font-weight:800; color:var(--white); margin-bottom:12px; position:relative; }
 .page-hero-sub   { color:rgba(255,255,255,.75); font-size:1.05rem; position:relative; }
 
 .form-layout {
@@ -1617,7 +1617,7 @@ picture { display: contents; }
 .eco-stat .es-lab { color: rgba(255,255,255,.85); font-size: .92rem; margin-top: 8px; display: block; }
 
 /* À propos : intro + valeurs + fondateur */
-.about-lead { max-width: 820px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 1.12rem; line-height: 1.8; }
+.about-lead { max-width: 820px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
 .about-lead strong { color: var(--green-dark); }
 .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 40px; }
 .value-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 30px; text-align: center; box-shadow: var(--shadow-sm); }
