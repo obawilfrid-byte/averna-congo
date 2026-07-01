@@ -1150,6 +1150,7 @@ picture { display: contents; }
 
 .tarif-img-wrap img {
   width: 100%;
+  height: auto;
   display: block;
   border-radius: var(--radius);
 }
@@ -1194,6 +1195,11 @@ picture { display: contents; }
   text-align: center;
 }
 
+/* Bloc texte de la carte tarif : titre + descriptif empilés, occupant la
+   largeur flexible restante (entre l'icône et le bouton). min-width:0 permet
+   au texte long de revenir à la ligne au lieu d'écraser toute la carte. */
+.tarif-card-body { flex: 1; min-width: 0; }
+
 .tarif-card h3 {
   font-size: 1rem;
   font-weight: 700;
@@ -1204,7 +1210,6 @@ picture { display: contents; }
 .tarif-card p {
   font-size: .85rem;
   color: var(--text-muted);
-  flex: 1;
   line-height: 1.55;
 }
 
